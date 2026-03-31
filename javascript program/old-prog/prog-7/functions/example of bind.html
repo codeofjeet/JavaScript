@@ -1,0 +1,23 @@
+<html>
+    <head>
+        <title>example - 1 of bind</title>
+    </head>
+    <body>
+        <script type="text/javascript">
+           let name = {
+            myname: "jeetendra"  
+            }
+
+            let PrintName = {
+                myname: "deepak",
+                fun: function()
+                {
+                    document.writeln(this.myname);
+                }
+            }
+
+            let n1 = PrintName.fun.bind(name);
+            n1();
+        </script>
+    </body>
+</html>

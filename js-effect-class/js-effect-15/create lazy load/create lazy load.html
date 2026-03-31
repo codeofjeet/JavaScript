@@ -1,0 +1,310 @@
+<html>
+    <head>
+        <title>Create lazy load</title>
+        <style>
+            *{
+                margin: 0;
+                padding: 0;
+                box-sizing:border-box ;
+            }
+
+            .main{
+                width: 1000px;
+                margin: auto;
+                padding: 20px 0;
+                text-align: center;
+            }
+            
+            .main h1{
+                padding: 20px 0;
+            }
+
+            .products{
+                display: flex;
+                justify-content: space-between;
+                flex-wrap: wrap;
+            }
+
+            .card{
+                width: 32%;
+                border-radius: 15px;
+                overflow: hidden;
+                box-shadow: 0px 0px 5px 2px gray;
+                margin-top: 15px;
+            }
+
+            .card img{
+                width: 100%;
+            }
+
+            .card p{
+                padding: 20px 0;
+                font-size: 18px;
+                font-weight: bold;
+            }
+        </style>
+    </head>
+    <body>
+       <div class="main">
+        <h1>Lazy Load</h1>
+        <div class="products">
+            
+        </div>
+       </div>
+    </body>
+    <script>
+        const data =[
+            {
+                "albumId": 1,
+                "id": 1,
+                "title": "codeofjeet",
+                "url": "image/",
+                "thumbnailUrl": "image/p1.jpg"
+            },
+            {
+                "albumId": 1,
+                "id": 2,
+                "title": "codeofjeet",
+                "url": "image/",
+                "thumbnailUrl": "image/p2.jpg"
+            },
+            {
+                "albumId": 1,
+                "id": 3,
+                "title": "codeofjeet",
+                "url": "image/",
+                "thumbnailUrl": "image/p3.jpg"
+            },
+            {
+                "albumId": 1,
+                "id": 4,
+                "title": "codeofjeet",
+                "url": "image/",
+                "thumbnailUrl": "image/p4.jpg"
+            },
+            {
+                "albumId": 1,
+                "id": 5,
+                "title": "codeofjeet",
+                "url": "image/",
+                "thumbnailUrl": "image/p5.jpg"
+            },
+            {
+                "albumId": 1,
+                "id": 6,
+                "title": "codeofjeet",
+                "url": "image/",
+                "thumbnailUrl": "image/p6.jpg"
+            },
+            {
+                "albumId": 1,
+                "id": 7,
+                "title": "codeofjeet",
+                "url": "image/",
+                "thumbnailUrl": "image/p7.jpg"
+            },
+            {
+                "albumId": 1,
+                "id": 8,
+                "title": "codeofjeet",
+                "url": "image/",
+                "thumbnailUrl": "image/p1.jpg"
+            },
+            {
+                "albumId": 1,
+                "id": 9,
+                "title": "codeofjeet",
+                "url": "image/",
+                "thumbnailUrl": "image/p3.jpg"
+            },
+            {
+                "albumId": 1,
+                "id": 10,
+                "title": "codeofjeet",
+                "url": "image/",
+                "thumbnailUrl": "image/p6.jpg"
+            },
+            {
+                "albumId": 1,
+                "id": 11,
+                "title": "codeofjeet",
+                "url": "image/",
+                "thumbnailUrl": "image/p2.jpg"
+            },
+            {
+                "albumId": 1,
+                "id": 12,
+                "title": "codeofjeet",
+               "url": "image/",
+                "thumbnailUrl": "image/p7.jpg"
+            },
+            {
+                "albumId": 1,
+                "id": 13,
+                "title": "codeofjeet",
+                "url": "image/",
+                "thumbnailUrl": "image/p5.jpg"
+            },
+            {
+                "albumId": 1,
+                "id": 14,
+                "title": "codeofjeet",
+                "url": "image/",
+                "thumbnailUrl": "image/p1.jpg"
+            },
+            {
+                "albumId": 1,
+                "id": 15,
+                "title": "codeofjeet",
+                "url": "image/",
+                "thumbnailUrl": "image/p7.jpg"
+            },
+            {
+                "albumId": 1,
+                "id": 16,
+                "title": "codeofjeet",
+                "url": "image/",
+                "thumbnailUrl": "image/p5.jpg"
+            },
+            {
+                "albumId": 1,
+                "id": 17,
+                "title": "codeofjeet",
+                "url": "image/",
+                "thumbnailUrl": "image/p2.jpg"
+            },
+            {
+                "albumId": 1,
+                "id": 18,
+                "title": "codeofjeet",
+               "url": "image/",
+                "thumbnailUrl": "image/p4.jpg"
+            },
+            {
+                "albumId": 1,
+                "id": 19,
+                "title": "codeofjeet",
+                "url": "image/",
+                "thumbnailUrl": "image/p6.jpg"
+            },
+            {
+                "albumId": 1,
+                "id": 20,
+                "title": "codeofjeet",
+                "url": "image/",
+                "thumbnailUrl": "image/p3.jpg"
+            },
+            {
+                "albumId": 1,
+                "id": 21,
+                "title": "codeofjeet",
+                "url": "image/",
+                "thumbnailUrl": "image/p1.jpg"
+            },
+            {
+                "albumId": 1,
+                "id": 22,
+                "title": "codeofjeet",
+               "url": "image/",
+                "thumbnailUrl": "image/p5.jpg"
+            },
+            {
+                "albumId": 1,
+                "id": 23,
+                "title": "codeofjeet",
+                "url": "image/",
+                "thumbnailUrl": "image/p2.jpg"
+            },
+            {
+                "albumId": 1,
+                "id": 24,
+                "title": "codeofjeet",
+                "url": "image/",
+                "thumbnailUrl": "image/p7.jpg"
+            },
+            {
+                "albumId": 1,
+                "id": 25,
+                "title": "codeofjeet",
+                "url": "image/",
+                "thumbnailUrl": "image/p4.jpg"
+            },
+            {
+                "albumId": 1,
+                "id": 26,
+                "title": "codeofjeet",
+                "url": "image/",
+                "thumbnailUrl": "image/p1.jpg"
+            },
+            {
+                "albumId": 1,
+                "id": 27,
+                "title": "codeofjeet",
+                "url": "image/",
+                "thumbnailUrl": "image/p5.jpg"
+            },
+            {
+                "albumId": 1,
+                "id": 28,
+                "title": "codeofjeet",
+                "url": "image/",
+                "thumbnailUrl": "image/p3.jpg"
+            },
+            {
+                "albumId": 1,
+                "id": 29,
+                "title": "codeofjeet",
+                "url": "image/",
+                "thumbnailUrl": "image/p6.jpg"
+            },
+            {
+                "albumId": 1,
+                "id": 30,
+                "title": "codeofjeet",
+                "url": "image/",
+                "thumbnailUrl": "image/p1.jpg"
+            },
+        ]
+
+        const productDiv = document.querySelector('.products');
+        let start = 0;
+        let limit = 9;
+        let ifLoading = false;
+
+        const loadData = ()=>{
+
+            if(ifLoading){
+                return;
+            }
+
+            ifLoading = true;
+            let newDiv = '';
+            let actualData = data.slice(start, limit);
+
+            actualData.forEach((item)=>{
+                newDiv +=`<div class="card">
+                <img src="${item.thumbnailUrl}">
+                <p>${item.title}</p>
+            </div>`
+            })
+            ifLoading = false;
+            productDiv.innerHTML += newDiv;
+            if(limit > 30){
+                ifLoading = true; 
+            }
+            start += 9;
+            limit += 9;
+        }
+
+        loadData();
+
+        window.addEventListener('scroll', ()=>{
+            let bottom = productDiv.getBoundingClientRect().bottom;
+            let winHeight = window.innerHeight;
+
+            if(bottom < winHeight){
+                loadData();
+            }
+        })
+    </script>
+</html>

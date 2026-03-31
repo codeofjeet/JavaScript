@@ -1,0 +1,17 @@
+<html>
+    <head>
+        <title>example of random()</title>
+    </head>
+    <body>
+        <script type="text/javascript">
+        //random() return only 0 to 1 random no
+        document.writeln("Random no of random() is :- " + Math.random());
+        document.writeln("<br>Random no between 0 to 1 is :- " + Math.random(0,1));
+        function ab()
+        {
+            return Math.random()*1000000;
+        }
+        document.writeln("<br>OTP is :-" + Math.floor(ab())); //just like otp no
+        </script>
+    </body>
+</html>

@@ -1,0 +1,16 @@
+<html>
+    <head>
+        <title>example of replace()</title>
+    </head>
+    <body>
+        <script type="text/javascript">
+       //replace() used to replace any string to another string
+       var n1="Once upon a time. once upon a time. once upon a time";
+       var n2 = n1.replace('once','ONCE');
+       var n3 = n1.replace(/once/gi,'ONCE');
+       document.writeln("Main string is :- " + n1 + "<br>");
+       document.writeln("<br>After change 'once' to 'ONCE' string is :<br>" + n2 + "<br>");
+       document.writeln("<br>After change '/once/gi' to 'ONCE' string is :<br> " + n3);
+        </script>
+    </body>
+</html>

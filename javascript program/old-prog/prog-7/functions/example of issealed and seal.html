@@ -1,0 +1,18 @@
+<html>
+    <head>
+        <title>example of issealed and seal</title>
+    </head>
+    <body>
+        <script type="text/javascript">
+           function name() 
+           {
+            this.myname = "jeetendra" ;
+            this.age= 52;
+            }
+            a1 = new name();
+            document.writeln("Checking object a1 is seal :- " + Object.isSealed(a1));
+            Object.seal(a1);
+            document.writeln("<br>After seal object a1 checking object a1 is seal :- " + Object.isSealed(a1));
+        </script>
+    </body>
+</html>

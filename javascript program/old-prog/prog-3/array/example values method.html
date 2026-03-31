@@ -1,0 +1,27 @@
+<html>
+    <head>
+        <title>example values method</title>
+    </head>
+    <body>
+        <p>Element of no:</p>
+        <input type"text" id="result">
+        <p>After apply values method now element of no1:</p>
+        <input type="text" id="result1">
+        <p>To print elements of no1 array we used to for...of</p>
+        <script type="text/javascript">
+            //unshift method add one element at start of array
+            var no = [34,45,76,98];
+            var no1=no.values();
+            document.getElementById("result").value=no;  
+            document.getElementById("result1").value=no1; 
+            for(i of no1)
+            {
+                document.writeln(i + "<br>")
+            }
+                /*document.writeln(no1.next().value);
+                document.writeln("<br>" +no1.next().value);
+                document.writeln("<br>" +no1.next().value);
+                document.writeln("<br>" +no1.next().value);*/
+        </script>
+    </body>
+</html>

@@ -1,0 +1,9 @@
+JS
+https://www.100jsprojects.com/projects
+https://www.geeksforgeeks.org/javascript/top-javascript-projects/
+-----------------------------
+C, C++
+https://www.codewithc.com/c-projects-with-source-code/?amp=1
+https://www.geeksforgeeks.org/cpp/top-50-cpp-project-ideas-for-beginners-advanced/
+https://www.interviewbit.com/blog/cpp-projects/
+https://www.fynd.academy/blog/c-project-ideas

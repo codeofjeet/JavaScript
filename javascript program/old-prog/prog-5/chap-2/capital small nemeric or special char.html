@@ -1,0 +1,45 @@
+<html>
+    <head>
+        <title>capital small nemeric or special char</title>
+    </head>
+    <body>
+        <script type="text/javascript">
+           function abc()
+           {
+            var no=document.getElementById('n').value;
+            var ans=no.charCodeAt(0);
+            //var ans=no.codePointAt(0); 
+                if(ans>=65 && ans<=90)
+                {
+                    document.getElementById("ans").innerText="You enter Capital char";
+                    document.getElementById("result").value=no;
+                }
+                else if(ans>=90 && ans<=122)
+                {
+                    document.getElementById("ans").innerHTML="You enter small char";
+                    document.getElementById("result").value=no;
+                }
+                else if(ans>=48 && ans<=57)
+                {
+                    document.getElementById("ans").innerText="You enter numeric char";
+                    document.getElementById("result").value=no;
+                }
+                else
+                {
+                    document.getElementById("ans").innerText="You enter special char";
+                    document.getElementById("result").value=no;
+                }
+           }
+        </script>
+        <label for="char">Enter any characer</label>
+        <br>
+        <input type="text" placeholder="Only single characer" id="n" onfocus="this.placeholder=''" onblur="this.placeholder='Only single characer'" >
+        <br><br>
+        <label for="ans" id="ans"></label>
+        <br>
+        <input type="text" placeholder="You Enter" id="result">
+        <br><br>
+        <button id="btn" onclick="abc(); return false;">click me </button>
+        </form>
+    </body>
+</html>

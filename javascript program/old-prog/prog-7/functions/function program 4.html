@@ -1,0 +1,30 @@
+<html>
+    <head>
+        <title>function program 4</title>
+    </head>
+    <body>
+        <script type="text/javascript">
+            var name,id,salary;
+            function Emp(id,name)
+            {
+                this.id=id;
+                this.name=name;
+                document.writeln(this.id + "<br>");
+                document.writeln(this.name + "<br>");
+            }
+            function Pemp(id,name,salary)
+            {
+                Emp.call(this,id,name);
+                this.salary=salary;
+                document.writeln(this.salary)
+            }
+            id=parseInt(prompt("Enter employee id"));
+            name=prompt("Enter employee name");
+            salary=parseFloat(prompt("Enter employee salary"));
+            new Pemp(id,name,salary);
+            /*document.write(Pemp.id +"<br>")
+            document.write(Pemp.name +"<br>")
+            document.write(Pemp.salary +"<br>")*/
+        </script>
+    </body>
+</html>

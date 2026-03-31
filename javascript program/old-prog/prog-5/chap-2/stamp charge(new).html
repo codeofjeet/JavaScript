@@ -1,0 +1,36 @@
+<html>
+    <head>
+        <title>postel wight</title>
+    </head>
+    <body>
+        <script type="text/javascript">
+           function othername()
+           {
+            var sc=10;
+            var pw=document.getElementById("userInput").value;
+            pw=parseInt(pw);
+                if(pw<=15)
+                {
+                    alert("Stamp char is 10 Rs");
+                    console.log("Stamp charge is 10 Rs");
+                    document.getElementById("setOutput").value=sc;
+                }
+                else
+                {
+                    sc=10+((pw-15)/5)*2;
+                    alert("Stamp charge is " + sc);
+                    console.log("Stamp charge is " + sc);
+                    document.getElementById("setOutput").value=sc;
+                }
+           }
+        </script>
+       
+        <input type="text" id="userInput" />
+        <br><br>
+        <input type="text" id="setOutput">
+        <br>
+        <label id="setAns" />
+        <br><br><br>
+        <button onclick="othername();">click me </button>
+    </body>
+</html>

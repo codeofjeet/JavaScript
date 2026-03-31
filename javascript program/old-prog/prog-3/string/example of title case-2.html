@@ -1,0 +1,41 @@
+<html>
+    <head>
+        <title>example of title case-2</title>
+    </head>
+    <body>
+        <input type="text" id="name">
+        <br><br>
+        <input type="button" onclick="titlecase()" value="Title Case">
+        <br>
+        <p id="tc"></p>
+
+        <script type="text/javascript">
+            function titlecase()
+            {
+                var nm = document.getElementById("name").value;
+                var i;
+                var ch = nm.charAt(0);
+                ch=ch.toUpperCase();
+                nm=setCharAt(nm,0,ch)
+                for(i=1;i<nm.length;i++)
+                {
+                    if(nm[i]==" ")
+                    {
+                        ch=nm.charAt(i+1);
+                        ch=ch.toUpperCase();
+                        nm=setCharAt(nm,i+1,ch)
+                    }
+                }
+
+                document.getElementById("tc").innerHTML=nm;
+            }
+         
+            function setCharAt(str,index,chr) 
+            {
+                if(index > str.length-1) 
+                return str;
+            return str.substring(0,index) + chr + str.substring(index+1);
+            }
+        </script>
+    </body>
+</html>

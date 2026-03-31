@@ -1,0 +1,134 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <title>Document</title>
+</head>
+<body onload="otp()">
+            <div class="maindivcontactus">
+                <div class="contactustext">
+                    <span class="spanfont">Contact Us</span><br>
+                     Want To Hear From You
+                </div>
+
+                <div class="address">
+                    <div class="childdiv">
+                        <div class="image">
+                            <img src="image/location.png" height="50px" width="50px">
+                        </div>
+                        <div class="textdiv">
+                            <span style="font-size: 20px; color: rgb(111, 193, 248);"><b>Address</b></span><br>
+                            613/B Sagar Vihar,<br>
+                            MI Road,<br>
+                            Near JLM campus<br>
+                            New Dehli - 300001
+                        </div>
+                    </div>
+
+                    <div class="childdiv">
+                        <div class="image">
+                            <img src="image/phone.png" height="50px" width="50px">
+                        </div>
+                        <div class="textdiv">
+                            <span style="font-size: 20px; color: rgb(111, 193, 248);"><b>Phone</b></span><br>
+                            +91 - xxxxx - xxxxx<br>
+                            +91 - xxxxx - xxxxx<br>
+                            +91 - xxxxx - xxxxx<br>
+                        </div>
+                    </div>
+
+                    <div class="childdiv">
+                        <div class="image">
+                            <img src="image/email.png" height="50px" width="50px">
+                        </div>
+                        <div class="textdiv">
+                            <span style="font-size: 20px; color: rgb(111, 193, 248);"><b>E-Mail</b></span><br>
+                            xxxxxxxxx123@gmail.com<br>
+                            xxxxxxxxx123-help@mail.com
+                        </div>
+                    </div>
+                </div>
+
+                <div class="rightform">
+                    <div class="errordiv">
+                        <b><span id="errormsg" style="color: red;"></span></b>
+                    </div>
+                    <form action="#" onsubmit="return validateForm()" method="post">
+                        <label>First Name<sup style="font-size: medium; color: red;">*</sup></label>
+                        <input type="text" id="fn" placeholder="First Name" id="n" onfocus="this.placeholder=''" onblur="this.placeholder='First Name'" name="fname"> 
+                        <br><br>
+            
+                        <label>Last Name<sup style="font-size: medium; color: red;">*</sup></label>
+                        <input type="text" id="ln" placeholder="Last Name" id="n" onfocus="this.placeholder=''" onblur="this.placeholder='last Name'" name="lname">
+                        <br><br>
+            
+                        <label>Date of Birth<sup style="font-size: medium; color: red;">*</sup></label>
+                        <input type="date" id="dt" name="bdate">
+                        <br><br>
+                       
+                        <label>City<sup style="font-size: medium; color: red;">*</sup></label>
+                        <select id="city" name="ct">
+                            <option></option>
+                            <option>Ajmer</option>
+                            <option>Agra</option>
+                            <option>Beawar</option>
+                            <option>Chandigarh</option>
+                            <option>Dudu</option>
+                            <option>Jaipur</option>
+                            <option>Kishangarh</option>
+                        </select>
+                        <br><br>
+            
+                        <label>State<sup style="font-size: medium; color: red;">*</sup></label>
+                        <select id="state" name="st">
+                            <option></option>
+                            <option>Rajasthan</option>
+                            <option>Bihar</option>
+                            <option>Karnataka</option>
+                            <option>Maharashtra</option>
+                            <option>Tamil Nadu</option>
+                            <option>Uttar Pradesh</option>
+                            <option>Gujrat</option>
+                        </select>
+                        <br><br>
+            
+                        <label>Country<sup style="font-size: medium; color: red;">*</sup></label>
+                        <select id="country" name="cntry">
+                            <option></option>
+                            <option>India</option>
+                            <option>USA</option>
+                            <option>UK</option>
+                            <option>China</option>
+                            <option>Russia</option>
+                            <option>Australia</option>
+                            <option>Canada</option>
+                        </select>
+                        <br><br>
+            
+                        <label>Mobile No<sup style="font-size: medium; color: red;">*</sup></label>
+                        <input type="text" id="tel" placeholder="In 10 Digit" id="n" onfocus="this.placeholder=''" onblur="this.placeholder='In 10 Digit'" name="mob" >
+                        <br><br>
+            
+                        <label>E-mail<sup style="font-size: medium; color: red;">*</sup></label>
+                        <input type="text" id="email" placeholder="Valid e-mail address" id="n" onfocus="this.placeholder=''" onblur="this.placeholder='Valid e-mail address'" name="mail" >
+                        <br><br>
+                        <label id="otp" class="green"></label><br>
+                        <input type="text" id="cotp"><br>
+                        <br><br>
+            
+                        <input type="submit" value="Submit" id="sbtn"><br>
+                    </form>
+                </div>
+
+                <?php include ('footer.php'); ?>
+
+            </div>
+
+
+   
+
+<script src="script.js"></script>
+</body>
+</html>

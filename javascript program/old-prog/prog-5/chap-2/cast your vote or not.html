@@ -1,0 +1,28 @@
+<html>
+    <head>
+        <title>cast your vote or not</title>
+    </head>
+    <body>
+        <script type="text/javascript">
+           function othername()
+           {
+            var age=document.getElementById("userInput").value;
+            age=parseInt(age);
+                if(age>=18)
+                {
+                    document.writeln("You can used your vote");
+                }
+                else
+                {
+                    document.writeln("You can not used your vote")
+                }
+           }
+        </script>
+        <label>Input your age</label>
+        <br>
+        <input type="text" id="userInput">
+        <br><br>
+        <button onclick="othername();">Click me</button>
+        </form>
+    </body>
+</html>

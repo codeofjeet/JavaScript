@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h2 class="print"></h2>
+
+    <script>
+        let no;
+        no=parseInt(prompt("Enter any no:- "));
+        if(no>0){
+            document.querySelector('.print').innerHTML="positive no";
+        }
+        else if(no<0){
+            document.querySelector('.print').innerHTML="negative no";
+        }
+        else{
+            document.querySelector('.print').innerHTML="zero no";
+        }
+    </script>
+</body>
+</html>

@@ -1,0 +1,18 @@
+<html>
+    <head>
+        <title>example of isfrozen and freeze</title>
+    </head>
+    <body>
+        <script type="text/javascript">
+           function name() 
+           {
+            this.myname = "jeetendra" ;
+            this.age= 52;
+            }
+            a1 = new name();
+            document.writeln("Checking object a1 is freeze :- " + Object.isFrozen(a1));
+            Object.freeze(a1);
+            document.writeln("<br>After freeze object a1 checking object a1 is freeze :- " + Object.isFrozen(a1));
+        </script>
+    </body>
+</html>

@@ -1,0 +1,43 @@
+<html>
+    <head>
+        <title>conditional operators</title>
+    </head>
+    <body>
+        <script type="text/javascript">
+           function abc()
+           {
+            var gn=document.getElementById('gen').value;
+            gn=gn.toLowerCase();
+            var ms=document.getElementById("ms").value;
+           ms=ms.toLowerCase();
+            var ag=document.getElementById("age").value;
+            ag=parseInt(ag);
+               if((ms=="married") || (ms=="unmarried" && gn=="male" && ag>29) || (ms=="unmarried" && gn=="female" && ag>25))
+                {
+                    document.getElementById("result").value="Driver is Insoured";
+                }
+                else
+                {
+                    document.getElementById("result").value="Driver is not Insoured";
+                }
+           }
+           
+        </script>
+        <label for="char">Enter Driver Gender</label>
+        <br>
+        <input type="text" placeholder="Male or Female" id="gen" onfocus="this.placeholder=''" onblur="this.placeholder='Male or Female'" >
+        <br><br>
+        <label>Enter Driver Marital Status</label>
+        <br>
+        <input type="text" placeholder="Married or Unmarried" id="ms" onfocus="this.placeholder=''" onblur="this.placeholder='Married or Unmarried'">
+        <br><br>
+        <label>Enter Driver Age </label>
+        <br>
+        <input type="text" placeholder="In Year" id="age" onfocus="this.placeholder=''" onblur="this.placeholder='In Year'">
+        <br><br>
+        <input type="text" placeholder="Driver is" id="result">
+        <br><br>
+        <button id="btn" onclick="abc(); return false;">click me </button>
+        </form>
+    </body>
+</html>

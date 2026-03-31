@@ -1,0 +1,20 @@
+<html>
+    <head>
+        <title>chap-1, Calculate years, months and remainder days</title>
+    </head>
+    <body>
+        <script type="text/javascript">
+            var day,year,month;
+            day=parseInt(prompt("Enter total days :-"));
+            year=parseInt(day/365);
+            day=(day%365);
+            month=parseInt(day/30);
+            day=(day%30);
+            document.write("Total years :- " + (year))
+            document.write("<br>");
+            document.write("Total months :-" + (month));
+            document.write("<br>");
+            document.write("Remainder days  :-" + (day));
+        </script>
+    </body>
+</html>

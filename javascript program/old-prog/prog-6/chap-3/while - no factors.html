@@ -1,0 +1,33 @@
+<html>
+    <head>
+        <title>while-no factors</title>
+    </head>
+    <body>
+        <script type="text/javascript">
+           function abc()
+           {
+            var no=document.getElementById("n").value;
+            no=parseInt(no);
+            var i=2;
+            var n=1;
+                while(i<no)
+                {
+                    if(no%i==0)
+                    {
+                        n=n + " " + i + " ";
+                    }
+                    i++;  
+                }
+                    document.getElementById("result").value=n;
+           }
+           
+        </script>
+        <label>Enter any no</label>
+        <br>
+        <input type="text" placeholder="Only Positive no" id="n" onfocus="this.placeholder=''" onblur="this.placeholder='Only Positive no'" >
+        <br><br>
+        <input type="text" placeholder="factors are" id="result">
+        <br><br>
+        <button id="btn" onclick="abc(); return false;">click me </button>
+    </body>
+</html>

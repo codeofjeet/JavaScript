@@ -1,0 +1,26 @@
+<html>
+    <head>
+        <title>even or odd no using conditional op</title>
+    </head>
+    <body>
+        <script type="text/javascript">
+           function abc()
+           {
+            var no1=document.getElementById('n1').value;
+            no1=parseInt(no1);
+            var ans;
+            ans=(no1%2==0)?"Even no":"Odd no";
+            document.getElementById("result").value=ans;
+           }
+           
+        </script>
+        <label>Enter any no</label>
+        <br>
+        <input type="text" placeholder="Positive no" id="n1" onfocus="this.placeholder=''" onblur="this.placeholder='Positive no'" >
+        <br><br>
+        <input type="text" placeholder="Ans is" id="result">
+        <br><br>
+        <button id="btn" onclick="abc(); return false;">click me </button>
+        </form>
+    </body>
+</html>

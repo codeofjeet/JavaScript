@@ -1,0 +1,174 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Scroll Reveal Example</title>
+  <style>
+    * {
+      box-sizing: border-box;
+      margin: 0;
+      padding: 0;
+    }
+
+    body {
+      font-family: Arial, sans-serif;
+      background-color: #f0f0f0;
+      line-height: 1.6;
+    }
+
+    .section {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      min-height: 100vh;
+      opacity: 0;
+      transform: translateY(50px);
+      transition: all 1s ease-out;
+    }
+
+    .section.visible {
+      opacity: 1;
+      transform: translateY(0);
+    }
+
+    .content-box {
+      background: #fff;
+      padding: 30px;
+      border-radius: 10px;
+      box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
+      display: flex;
+      flex-wrap: wrap;
+      align-items: center;
+      max-width: 800px;
+      width: 90%;
+      gap: 20px;
+    }
+
+    .content-box img {
+      width: 250px;
+      height: auto;
+      border-radius: 10px;
+    }
+
+    .text {
+      flex: 1;
+    }
+
+    .text h2 {
+      margin-bottom: 10px;
+    }
+
+    /* Animation Effects */
+    .fade-in {
+      transform: translateY(50px);
+    }
+
+    .slide-left {
+      transform: translateX(100px);
+    }
+
+    .slide-right {
+      transform: translateX(-100px);
+    }
+
+    .zoom-in {
+      transform: scale(0.8);
+    }
+
+    .fade-in.visible,
+    .slide-left.visible,
+    .slide-right.visible,
+    .zoom-in.visible {
+      transform: translate(0, 0) scale(1);
+      opacity: 1;
+    }
+  </style>
+</head>
+<body>
+
+  <!-- Section 1 -->
+  <div class="section fade-in">
+    <div class="content-box">
+      <img src="image/s1.jpg">
+      <div class="text">
+        <h2>Section 1</h2>
+        <p>This content appears with a fade-in effect when scrolled into view.</p>
+      </div>
+    </div>
+  </div>
+
+  <!-- Section 2 -->
+  <div class="section slide-left">
+    <div class="content-box">
+      <img src="image/s2.jpg">
+      <div class="text">
+        <h2>Section 2</h2>
+        <p>This content slides in from the right when scrolled into view.</p>
+      </div>
+    </div>
+  </div>
+
+  <!-- Section 3 -->
+  <div class="section slide-right">
+    <div class="content-box">
+      <img src="image/s3.jpg">
+      <div class="text">
+        <h2>Section 3</h2>
+        <p>This content slides in from the left when scrolled into view.</p>
+      </div>
+    </div>
+  </div>
+
+  <!-- Section 4 -->
+  <div class="section zoom-in">
+    <div class="content-box">
+      <img src="image/s4.jpg">
+      <div class="text">
+        <h2>Section 4</h2>
+        <p>This content zooms in when scrolled into view.</p>
+      </div>
+    </div>
+  </div>
+
+  <script>
+    // Select all sections with animation classes
+    const sections = document.querySelectorAll('.section');
+
+    const observer = new IntersectionObserver(entries => {
+      entries.forEach(entry => {
+        if (entry.isIntersecting) {
+          entry.target.classList.add('visible');
+          observer.unobserve(entry.target); // Only run once per section
+        }
+      });
+    }, {
+      threshold: 0.5 // Trigger when 50% of section is visible
+    });
+
+    sections.forEach(section => {
+      observer.observe(section);
+    });
+  </script>
+
+  <!-- The IntersectionObserver API in JavaScript is a modern, efficient way to detect when an element enters or leaves the viewport (or any other container). It's especially useful for scroll-based animations, lazy loading images, infinite scroll, and more — without requiring event listeners for scroll, which can be inefficient.
+    const observer = new IntersectionObserver(callback, options);
+    observer.observe(targetElement);
+
+    callback: A function that runs when the observed element enters or exits the viewport.
+    options: Configuration object (like threshold, root margin, etc.).
+    observe(): Starts observing an element.
+
+    observer.unobserve(entry.target); // stop observing after it's visible once
+    threshold: 0.5 // trigger when 50% of the element is visible
+
+    entry.isIntersecting    // true if it's currently in view
+
+    observe(element)
+        Starts watching the element for visibility changes.
+        Triggers your callback when it enters or leaves the viewport.
+
+    unobserve(element)
+        Stops watching that element.
+        Great for "animate once" behavior or lazy loading — after it appears once, you stop watching it. -->
+</body>
+</html>

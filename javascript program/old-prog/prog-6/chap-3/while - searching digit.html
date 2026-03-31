@@ -1,0 +1,40 @@
+<html>
+    <head>
+        <title>while-Searching digit</title>
+    </head>
+    <body>
+        <script type="text/javascript">
+           function abc()
+           {
+            var no=document.getElementById("n").value;
+            no=parseInt(no);
+            var sd=document.getElementById("d").value;
+            sd=parseInt(sd);
+            var c=0;
+            var a;
+                while(no>0)
+                {
+                    a=no%10;
+                        if(a==sd)
+                        {
+                            c++;
+                        }
+                    no=parseInt(no/10);
+                }
+                document.getElementById("result").value=c;
+           }
+           
+        </script>
+        <label>Enter any no</label>
+        <br>
+        <input type="text" placeholder="Only Positive no" id="n" onfocus="this.placeholder=''" onblur="this.placeholder='Only Positive no'" >
+        <br><br>
+        <label>Enter searching digit</label>
+        <br>
+        <input type="text" placeholder="Only Positive digit" id="d" onfocus="this.placeholder=''" onblur="this.placeholder='Only Positive digit'" >
+        <br><br>
+        <input type="text" placeholder="Digit occurs" id="result">
+        <br><br>
+        <button id="btn" onclick="abc(); return false;">click me </button>
+    </body>
+</html>

@@ -1,0 +1,91 @@
+  .rotate {
+      width: 150px; /* Set the size of the image */
+      animation: spin 8s linear infinite;
+      position: absolute;
+    }
+
+    @keyframes spin {
+      0% {
+        transform: rotate(0deg);
+      }
+      100% {
+        transform: rotate(360deg);
+      }
+    }
+
+    .container{
+      width: 98%;
+      height: 500px;
+      display: flex;
+      margin: 100px auto;
+    }
+
+    .left{
+      width: 48%;
+      height: 100%;
+      border-radius: 50% 0 0 0;
+      background-image: url(image/about.jpg);
+      position: relative;
+      z-index: 2;
+    }
+
+    .right{
+      width: 48%;
+      height: 100%;
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: center;
+      align-content: center;
+    }
+
+    .right div{
+      width: 48%;
+      height: 48%;
+      background-color: blueviolet;
+      transition: transform 1s ease;
+      position: relative;
+      margin: 1px;
+    }
+
+    .one{
+      background-image: url(image/hero-3.jpg);
+      background-position: center;
+      background-size: cover;
+      background-repeat: no-repeat;
+    }
+
+    .two{
+      background-image: url(image/menu-7.jpg);
+      background-position: center;
+      background-size: cover;
+      background-repeat: no-repeat;
+    }
+
+    .three{
+      background-image: url(image/menu-6.jpg);
+      background-position: center;
+      background-size: cover;
+      background-repeat: no-repeat;
+    }
+
+    .four{
+      background-image: url(image/menu-8.jpg);
+      background-position: center;
+      background-size: cover;
+      background-repeat: no-repeat;
+      border-radius: 0 0 50% 0;
+    }
+
+    .container:hover .one{
+      transform: translate(-10px, -10px); 
+    }
+    
+    .container:hover  .two {
+      transform: translate(10px, -10px);
+    }
+    .container:hover .three {
+      transform: translate(-10px, 10px);
+    }
+    .container:hover .four {
+      transform: translate(10px, 10px);
+    } 

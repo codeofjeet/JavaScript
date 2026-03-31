@@ -1,0 +1,23 @@
+<html>
+    <head>
+        <title>map()</title>
+    </head>
+    <body>
+        <script type="text/javascript">
+           function abc()
+           {
+            var i;
+            var a="";
+            var name=["anil", "deepak", "gaurav", "bhupendra", "sumit"];
+           var name1=name.map(function(i)
+            {
+                a+=i+" ";
+                a+="\n";
+            //document.writeln(index +"  " + item +"<br>");
+            });
+                alert(a);
+           } 
+        </script>
+        <button id="btn" onclick="abc(); return false;">click me </button>
+    </body>
+</html>

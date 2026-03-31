@@ -1,0 +1,20 @@
+<html>
+    <head>
+        <title>example of some method</title>
+    </head>
+    <body>
+        <script type="text/javascript">
+    //some() one or more than one value is full fill condition than return true
+        var emp=[23,45,67,89,23,11,28];
+        var emp1=[1,2,3,4,5];
+        function test(x)
+        {
+            return x>20;
+        }
+        var result=emp.some(test);
+        document.writeln("Result is true becouse one value of emp array >20 :- "+result);
+        result=emp1.some(test);
+        document.writeln("<br>Result is false becouse all value of array emp1 <20 :- "+result);
+        </script>
+    </body>
+</html>

@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Datatypes</title>
+</head>
+<body>
+    <h1>Datatypes in JavaScript</h1>
+    
+    <script>
+        //Strings
+        document.write('<p style="color: red; font-size: 24px;  font-weight:800;">String </p>');
+        document.write(typeof "String");
+        document.write("<br/>", typeof Date(2011,1,1));
+
+        document.write('<p style="color: red; font-size: 24px;  font-weight:800;">Number</p>');
+        document.write(typeof 78);
+        document.write("<br/>", typeof 23.9);
+
+        document.write('<p style="color: red; font-size: 24px;  font-weight:800;">Bool</p>');
+        document.write(typeof true);
+        document.write("<br/>", typeof false);
+
+        document.write('<p style="color: red; font-size: 24px;  font-weight:800;">Object</p>');
+        document.write(typeof {});
+        document.write("<br/>", typeof []);
+        document.write("<br/>", typeof null);
+        document.writeln("<br/>", typeof /aaa/);
+        document.write("<br/>", typeof Error());
+
+        document.write('<p style="color: red; font-size: 24px;  font-weight:800;">Function</p>');
+        document.write(typeof function(){});
+
+        document.write('<p style="color: red; font-size: 24px;  font-weight:800;">Undefined</p>');
+        let no1;
+        document.write(typeof no1);
+    </script>
+</body>
+</html>

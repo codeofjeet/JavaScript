@@ -1,0 +1,25 @@
+<html>
+    <head>
+        <title>calculate total salary</title>
+    </head>
+    <body>
+        <script type="text/javascript">
+            var bs,da,hra,ts;
+            bs=parseFloat(prompt("Enter your basic salary"))
+            da=bs*.98;
+                if(da>10000)
+                {
+                    da=10000;
+                }
+            hra=bs*.15;
+                if(hra>=3000)
+                {
+                    hra=3000;
+                }
+            document.write("Basic salary is :-" + (bs));
+            document.write("DA is :-" + (da));
+            document.write("HRA is :-" +(hra));
+            document.write("Total salary is :- " + (ts));
+        </script>
+    </body>
+</html>

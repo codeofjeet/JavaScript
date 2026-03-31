@@ -1,0 +1,72 @@
+<html>
+    <head>
+        <title>widthow amount</title>
+    </head>
+    <body>
+        <script type="text/javascript">
+            var wa,n500,n200,n100,n50,n20,n10,n5,n2,n1;
+            wa=parseInt(prompt("Enter total widthow amount"));
+                if(wa>=500)
+                {
+                    n500=parseInt(wa/500);
+                    wa=wa%500;
+                    document.write("Total 500 Rs notes :- " + (n500) + "<br>"); 
+                }
+
+                if(wa>=200)
+                {
+                    n200=parseInt(wa/200);
+                    wa=wa%200;
+                    document.write("Total 200 Rs notes :- " + (n200) + "<br>");
+                }
+
+                if(wa>=100)
+                {
+                    n100=parseInt(wa/100);
+                    wa=wa%100;
+                    document.write("Total 100 Rs notes :- " + (n100) + "<br>");
+                }
+
+                if(wa>=50)
+                {
+                    n50=parseInt(wa/50);
+                    wa=wa%50;
+                    document.write("Total 50 Rs notes :- " + (n50) + "<br>");
+                }
+
+                if(wa>=20)
+                {
+                    n20=parseInt(wa/20);
+                    wa=wa%20;
+                    document.write("Total 20 Rs notes :- " + (n20) + "<br>");
+                }
+
+                if(wa>=10)
+                {
+                    n10=parseInt(wa/10);
+                    wa=wa%10;
+                    document.write("Total 10 Rs notes :- " + (n10) + "<br>");
+                }
+
+                if(wa>=5)
+                {
+                    n5=parseInt(wa/5);
+                    wa=wa%5;
+                    document.write("Total 5 Rs notes :- " + (n5) + "<br>");
+                }
+
+                if(wa>=2)
+                {
+                    n2=parseInt(wa/2);
+                    wa=wa%2;
+                    document.write("Total 2 Rs notes :- " + (n2) + "<br>");
+                }
+
+                if(wa>=1)
+                {
+                    n1=parseInt(wa/1);
+                    document.write("Total 1 Rs notes :- " + (n1) + "<br>")
+                }
+        </script>
+    </body>
+</html>

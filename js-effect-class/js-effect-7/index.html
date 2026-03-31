@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Typing Effect</title>
+  <style>
+    #display {
+      font-size: 30px;
+      font-family:Arial, Helvetica, sans-serif;
+      color: red;
+      white-space: pre;
+    }
+  </style>
+</head>
+<body>
+
+<div id="display"></div>
+
+<script>
+  let txt = ["Java", "Python", "JavaScript", "C++", "C"];
+  let speed = 100; 
+  let display = document.getElementById("display");
+
+  let wordIndex = 0;
+  let charIndex = 0;
+
+  function typeWriter() {
+    if (wordIndex < txt.length) {
+      if (charIndex < txt[wordIndex].length) {
+        display.textContent += txt[wordIndex][charIndex];
+        charIndex++;
+        setTimeout(typeWriter, speed);
+      } else {
+        // Move to next word 
+        charIndex = 0;
+        wordIndex++;
+        setTimeout(() => {
+          display.textContent = "";
+          typeWriter();
+        }, speed);
+      }
+    }
+    else{
+      wordIndex=0;
+      typeWriter();
+    }
+  }
+
+  typeWriter();
+</script>
+
+</body>
+</html>

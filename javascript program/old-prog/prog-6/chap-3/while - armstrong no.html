@@ -1,0 +1,55 @@
+<html>
+    <head>
+        <title>while-armstrong no</title>
+    </head>
+    <body>
+        <script type="text/javascript">
+           function abc()
+           {
+            var no=document.getElementById("n").value;
+            no=parseInt(no);
+            var c=0;
+            var i;
+            var n=no;
+            var sum;
+            var a;
+            var arm=0
+                while(no>0)
+                {
+                    c++;
+                    no=parseInt(no/10);
+                }
+                no=n;
+                while(n>0)
+                {
+                    a=n%10;
+                    i=1;
+                    sum=1;
+                        while(i<=c)
+                        {
+                            sum=sum*a;
+                            i++;
+                        }
+                    arm=arm+sum;
+                    n=parseInt(n/10);
+                }
+                if(arm==no)
+                {
+                    document.getElementById("result").value="Armstrong no";
+                }
+                else
+                {
+                    document.getElementById("result").value="Not a armstrong no"
+                }
+           }
+           
+        </script>
+        <label>Enter any no</label>
+        <br>
+        <input type="text" placeholder="Only Positive no" id="n" onfocus="this.placeholder=''" onblur="this.placeholder='Only Positive no'" >
+        <br><br>
+        <input type="text" placeholder="No is" id="result">
+        <br><br>
+        <button id="btn" onclick="abc(); return false;">click me </button>
+    </body>
+</html>

@@ -1,0 +1,33 @@
+<html>
+    <head>
+        <title>example of sort method</title>
+    </head>
+    <body>
+        <script type="text/javascript">
+           var emp=[23,45,32,21,76,78,98];
+           document.writeln("Befor sort Array :-" + emp);
+           emp.sort();
+           document.writeln("<br>Sorted Array :-" + emp);
+           const name=["jeetendra","anil","gaurav","deepak","bhupendra","Aakash"]; //var not work
+           document.writeln("<br>Befor sort name are :- " + name);
+           name.sort();
+           document.writeln("<br>After sort name are :- " + name);
+           document.writeln("<br>Sort using function");//sort as a alphabete
+           const no=[23,34,56,2,87,98,12];
+           document.writeln("<br>No without sort:- " + no);
+           no.sort(function(a,b)
+           {
+            return a-b
+           });
+           document.writeln("<br>After sorting in ascending order no :- " + no);
+           const no1=[23,34,56,2,87,98,12];
+           document.writeln("<br>No1 without sort:- " + no1);
+           no1.sort(function(a,b)
+           {
+            return b-a
+           });
+           document.writeln("<br>After sorting in descending order no :- " + no1);
+
+        </script>
+    </body>
+</html>

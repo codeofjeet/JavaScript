@@ -1,0 +1,82 @@
+<html>
+    <head>
+        <title>while-No in words</title>
+    </head>
+    <body>
+        <script type="text/javascript">
+           function abc()
+           {
+            var no=document.getElementById("n1").value;
+            no=parseInt(no);
+            var a;
+            var wd="";
+            var n=no;
+            var x=1;
+            var c=0;
+                while(no>0)
+                {
+                   x=x*10;
+                   c++;
+                    no=parseInt(no/10);
+                }
+                x=parseInt(x/10);
+                while(c>0)
+                {
+                    a=parseInt(n/x);
+                        if(a==1)
+                        {
+                            wd=wd + "One" + " ";
+                        }
+                        else if(a==2)
+                        {
+                            wd=wd + "Two" + " ";
+                        }
+                        else if(a==3)
+                        {
+                            wd=wd + "Three" + " ";
+                        }
+                        else if(a==4)
+                        {
+                            wd=wd + "Four" + " "; 
+                        }
+                        else if(a==5)
+                        {
+                            wd=wd + "Five" + " ";
+                        }
+                        else if(a==6)
+                        {
+                            wd=wd + "Six" + " ";
+                        }
+                        else if(a==7)
+                        {
+                            wd=wd + "Seven" + " ";
+                        }
+                        else if(a==8)
+                        {
+                            wd=wd + "Eight" + " ";
+                        }
+                        else if(a==9)
+                        {
+                            wd=wd + "Nine" + " ";
+                        }
+                        else
+                        {
+                            wd=wd + "Zero" + " "
+                        }
+                    n=n%x;
+                    x=parseInt(x/10);
+                    c--;
+                }
+                    document.getElementById("result").value=wd;
+           }
+           
+        </script>
+        <label>Enter any no</label>
+        <br>
+        <input type="text" placeholder="Only Positive no" id="n1" onfocus="this.placeholder=''" onblur="this.placeholder='Only Positive no'" >
+        <br><br>
+        <input type="text" placeholder="No in words" id="result">
+        <br><br>
+        <button id="btn" onclick="abc(); return false;">click me </button>
+    </body>
+</html>

@@ -1,0 +1,120 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <title>Advanced Code Editor</title>
+  <!-- CodeMirror CSS -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/codemirror/5.65.13/codemirror.min.css" />
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/codemirror/5.65.13/theme/dracula.min.css" />
+  <style>
+    body {
+      margin: 0;
+      font-family: monospace;
+      display: flex;
+      flex-direction: column;
+      height: 100vh;
+      background: #282a36;
+      color: white;
+    }
+
+    #editor-wrapper {
+      display: flex;
+      flex: 1;
+    }
+
+    .editor {
+      flex: 1;
+      display: flex;
+      flex-direction: column;
+      border-right: 1px solid #444;
+    }
+
+    .editor:last-child {
+      border-right: none;
+    }
+
+    iframe {
+      flex: 1;
+      border: none;
+      background: white;
+    }
+
+    #run {
+      background: #50fa7b;
+      color: black;
+      border: none;
+      padding: 10px;
+      cursor: pointer;
+      font-size: 16px;
+    }
+
+    .label {
+      background: #44475a;
+      padding: 5px;
+      text-align: center;
+    }
+
+    .CodeMirror {
+      height: 100%;
+    }
+  </style>
+</head>
+<body>
+
+  <button id="run">Run ▶️</button>
+
+  <div id="editor-wrapper">
+    <div class="editor">
+      <div class="label">HTML</div>
+      <textarea id="html-code"></textarea>
+    </div>
+    <div class="editor">
+      <div class="label">CSS</div>
+      <textarea id="css-code"></textarea>
+    </div>
+    <div class="editor">
+      <div class="label">JavaScript</div>
+      <textarea id="js-code"></textarea>
+    </div>
+    <iframe id="output"></iframe>
+  </div>
+
+  <!-- CodeMirror JS -->
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/codemirror/5.65.13/codemirror.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/codemirror/5.65.13/mode/xml/xml.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/codemirror/5.65.13/mode/css/css.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/codemirror/5.65.13/mode/javascript/javascript.min.js"></script>
+
+  <script>
+    // Initialize CodeMirror for HTML, CSS, and JS
+    const htmlEditor = CodeMirror.fromTextArea(document.getElementById("html-code"), {
+      mode: "text/html",
+      theme: "dracula",
+      lineNumbers: true
+    });
+
+    const cssEditor = CodeMirror.fromTextArea(document.getElementById("css-code"), {
+      mode: "css",
+      theme: "dracula",
+      lineNumbers: true
+    });
+
+    const jsEditor = CodeMirror.fromTextArea(document.getElementById("js-code"), {
+      mode: "javascript",
+      theme: "dracula",
+      lineNumbers: true
+    });
+
+    // Run Button
+    document.getElementById("run").addEventListener("click", () => {
+      const html = htmlEditor.getValue();
+      const css = `<style>${cssEditor.getValue()}</style>`;
+      const js = `<script>${jsEditor.getValue()}<\/script>`;
+
+      const output = document.getElementById("output");
+      output.srcdoc = html + css + js;
+    });
+  </script>
+
+</body>
+</html>

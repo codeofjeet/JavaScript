@@ -1,0 +1,23 @@
+<html>
+    <head>
+        <title>for . . . in</title>
+    </head>
+    <body>
+        <script type="text/javascript">
+           function abc()
+           {
+            var i;
+            var a1="";
+            var name = {a : "anil", b : "deepak", c : "gaurav", d : "bhupendra", e :"sumit", f : 10};
+           for(var i in name)
+            {
+                a1+=i+" " + name[i];
+                a1+="\n";
+            //document.writeln(index +"  " + item +"<br>");
+            };
+                alert(a1);
+           } 
+        </script>
+        <button id="btn" onclick="abc(); return false;">click me </button>
+    </body>
+</html>

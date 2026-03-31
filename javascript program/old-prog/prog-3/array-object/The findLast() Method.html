@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html>
+<body>
+<h1>JavaScript Arrays</h1>
+<h2>The findLast() Method</h2>
+
+<p>findLast() returns the value of the last element in an array that passes a test (provided by a function):</p>
+
+<p id="demo"></p>
+
+<script>
+const ages = [3, 10, 18, 20];
+
+document.getElementById("demo").innerHTML = ages.findLast(checkAge);
+
+function checkAge(age) {
+  return age > 18;
+}
+</script>
+
+</body>
+</html>

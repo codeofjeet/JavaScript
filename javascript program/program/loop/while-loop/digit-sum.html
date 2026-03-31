@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Digit Sum</title>
+</head>
+<body>
+    <script>
+        let no, sum =0, a;
+        no=parseInt(prompt("Enter any no:- "));
+        while(no > 0){
+            a = no % 10;
+            sum = sum + a;
+            no = parseInt(no / 10);
+        }
+            document.write("Digit Sum is:- " + sum);
+    </script>
+</body>
+</html>

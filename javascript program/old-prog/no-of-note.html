@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Currency Notes</title>
+    <style>
+        *{
+            padding: 0;
+            margin: 0;
+        }
+
+        .container{
+            width: 450px;
+            height: auto;
+            border: 1px solid red;
+            border-radius: 5px;
+            margin: 130px auto;
+        }        
+
+        p{
+            margin: 10px;
+            background-color: antiquewhite;
+            padding: 15px;
+            font-size: 18px;
+            font-family: Arial, Helvetica, sans-serif;
+            display: none;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <p id="n2000"></p>
+        <p id="n500"></p>
+        <p id="n200"></p>
+        <p id="n100"></p>
+        <p id="n50"></p>
+        <p id="n20"></p>
+        <p id="n10"></p>
+        <p id="n5"></p>
+        <p id="n2"></p>
+        <p id="n1"></p>
+    </div>
+
+    <script>
+        let wAmount;
+        let n2000, n500, n200, n100, n50, n20, n10, n5, n2, n1;
+
+        wAmount = parseInt(prompt("Enter withdrawal amount :-"));
+
+        if(wAmount >=2000){
+            const nt2000 =  document.getElementById('n2000');
+            nt2000.style.display = "block";
+            n2000 = parseInt(wAmount/2000);
+            wAmount = wAmount % 2000;
+            nt2000.innerHTML = "Total 2000 Rs Note:- " + n2000 + " Amount :- " + n2000 * 2000;
+        }
+    </script>
+</body>
+</html>

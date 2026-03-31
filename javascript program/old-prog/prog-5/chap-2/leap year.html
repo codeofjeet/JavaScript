@@ -1,0 +1,26 @@
+<html>
+    <head>
+        <title>leap year</title>
+    </head>
+    <body>
+        <script type="text/javascript">
+           function othername()
+           {
+            var year=document.getElementById("userInput").value;
+            year=parseInt(year);
+                if((year%4==0 && year%100!=0) || (year%400==0))
+                {
+                    alert("Leap year");
+                }
+                else
+                {
+                    alert("Not a leap year");
+                }
+           }
+        </script>
+        <input type="text" id="userInput">
+        <br><br>
+        <button onclick="othername();">click me </button>
+        </form>
+    </body>
+</html>

@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h1 class="print"></h1>
+
+    <script>
+        let marks;
+        marks = parseInt(prompt("Enter total marks:- "))
+        if(marks>=60){
+            document.querySelector('.print').innerHTML="First Division";
+        }
+        else if(marks>=48){
+            document.querySelector('.print').innerHTML="Second Division";
+        }
+        else if(marks>=36){
+            document.querySelector('.print').innerHTML="Third Division";
+        }
+        else{
+            document.querySelector('.print').innerHTML="Fail";
+        }
+    </script>
+</body>
+</html>

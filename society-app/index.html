@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Society Income & Expense Manager</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="style.css">
+  <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+</head>
+<body>
+  <header>
+    <h1>🏢 Society Income & Expense Manager</h1>
+    <nav>
+      <button onclick="showSection('dashboard')">Dashboard</button>
+      <button onclick="showSection('income')">Income</button>
+      <button onclick="showSection('expenses')">Expenses</button>
+      <button onclick="showSection('reports')">Reports</button>
+    </nav>
+  </header>
+
+  <!-- Dashboard Section -->
+  <section id="dashboard" class="active">
+    <h2>Dashboard</h2>
+    <div class="cards">
+      <div class="card">
+        <h3>Total Income</h3>
+        <p id="totalIncome">₹0</p>
+      </div>
+      <div class="card">
+        <h3>Total Expenses</h3>
+        <p id="totalExpenses">₹0</p>
+      </div>
+      <div class="card">
+        <h3>Balance</h3>
+        <p id="balance">₹0</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- Income Section -->
+  <section id="income">
+    <h2>Income Records</h2>
+    <form id="incomeForm">
+      <input type="text" id="incomeSource" placeholder="Source" required>
+      <input type="number" id="incomeAmount" placeholder="Amount" required>
+      <input type="date" id="incomeDate" required>
+      <input type="text" id="incomeDesc" placeholder="Description">
+      <button type="submit">Add Income</button>
+    </form>
+    <table>
+      <thead>
+        <tr>
+          <th>Source</th>
+          <th>Amount</th>
+          <th>Date</th>
+          <th>Description</th>
+          <th>Action</th>
+        </tr>
+      </thead>
+      <tbody id="incomeTable"></tbody>
+    </table>
+  </section>
+
+  <!-- Expenses Section -->
+  <section id="expenses">
+    <h2>Expense Records</h2>
+    <form id="expenseForm">
+      <input type="text" id="expenseCategory" placeholder="Category" required>
+      <input type="number" id="expenseAmount" placeholder="Amount" required>
+      <input type="date" id="expenseDate" required>
+      <input type="text" id="expenseDesc" placeholder="Description">
+      <button type="submit">Add Expense</button>
+    </form>
+    <table>
+      <thead>
+        <tr>
+          <th>Category</th>
+          <th>Amount</th>
+          <th>Date</th>
+          <th>Description</th>
+          <th>Action</th>
+        </tr>
+      </thead>
+      <tbody id="expenseTable"></tbody>
+    </table>
+  </section>
+
+  <!-- Reports Section -->
+  <section id="reports">
+    <h2>Reports</h2>
+    <canvas id="reportChart"></canvas>
+  </section>
+
+  <footer>
+    <p>© 2025 Society Manager | Developed in HTML, CSS & JS</p>
+  </footer>
+
+  <script src="script.js"></script>
+</body>
+</html>

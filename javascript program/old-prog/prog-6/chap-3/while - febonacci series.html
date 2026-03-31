@@ -1,0 +1,36 @@
+<html>
+    <head>
+        <title>while-fibonacci series</title>
+    </head>
+    <body>
+        <script type="text/javascript">
+           function abc()
+           {
+            var no=document.getElementById("n").value;
+            no=parseInt(no);
+            var i=3;
+            var n="0 1";
+            var f0=0;
+            var f1=1;
+            var fib;
+                while(i<=no)
+                {
+                    fib=f0+f1;
+                    n=n + "  " + fib;
+                    f0=f1;
+                    f1=fib;
+                    i++;  
+                }
+                    document.getElementById("result").value=n;
+           }
+           
+        </script>
+        <label>Enter any no</label>
+        <br>
+        <input type="text" placeholder="Only Positive no" id="n" onfocus="this.placeholder=''" onblur="this.placeholder='Only Positive no'" >
+        <br><br>
+        <input type="text" placeholder="febonacci series" id="result">
+        <br><br>
+        <button id="btn" onclick="abc(); return false;">click me </button>
+    </body>
+</html>

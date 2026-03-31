@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    
+    <script>
+        let days, year, month;
+        days=parseInt(prompt("Enter total days:-"));
+
+        year = parseInt(days/365);
+        document.write(`No of year ${year}`);
+
+        days = days%365;
+        month = parseInt(days/30);
+        document.write("<br/> No of month :- ", month);
+
+        days = days%30;
+        document.write("<br/> Remainer days :- ", days);
+    </script>
+</body>
+</html>

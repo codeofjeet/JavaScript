@@ -1,0 +1,75 @@
+<html>
+    <head>
+        <title>do while exmp-1</title>
+    </head>
+    <body>
+        <script type="text/javascript">
+           function abc()
+           {
+            var no1=document.getElementById('n1').value;
+            no1=parseInt(no1);
+            var no2=document.getElementById("n2").value;
+            no2=parseInt(no2);
+            var choice=document.getElementById("ch").value;
+            var ans;
+            switch(choice)
+            {
+                case "1":
+                case "a":
+                case "A":
+                case "+":
+                    ans=no1+no2;
+                document.getElementById("result").value=ans;
+                break;
+                case "2":
+                case "s":
+                case "S":
+                case "-": 
+                    ans=no1-no2;
+                document.getElementById("result").value=ans;
+                break;
+                case "3": 
+                case "m": 
+                case "M": 
+                case "*": 
+                    ans=no1*no2;
+                document.getElementById("result").value=ans;
+                break;
+                case "4": 
+                case "d": 
+                case "D": 
+                case "/": 
+                    ans=no1/no2;
+                document.getElementById("result").value=ans;
+                break;
+                case "5":
+                case "r": 
+                case "R": 
+                case "%":
+                    ans=no1%no2;
+                document.getElementById("result").value=ans;
+                break;
+                default:
+                document.getElementById("result").value="You enter a wrong choice";
+            }
+           }
+           
+        </script>
+        <label>Enter first no</label>
+        <br>
+        <input type="text" placeholder="Positive no" id="n1" onfocus="this.placeholder=''" onblur="this.placeholder='Positive no'" >
+        <br><br>
+        <label>Enter second no</label>
+        <br>
+        <input type="text" placeholder="Positive no" id="n2" onfocus="this.placeholder=''" onblur="this.placeholder='Positive no'" >
+        <br><br>
+        <label>Enter any choice</label>
+        <br>
+         <input type="text" placeholder="A,S,D,M,r-1,2,3,4,5-+,-,*,/,%" id="ch" onfocus="this.placeholder=''" onblur="this.placeholder='A,S,D,M,r-1,2,3,4,5-+,-,*,/,%'" >
+        <br><br>
+        <input type="text" placeholder="Ans is" id="result">
+        <br><br>
+        <button id="btn" onclick="abc(); return false;">click me </button>
+        </form>
+    </body>
+</html>

@@ -1,0 +1,1 @@
+document.write("Always bet on JavaScript.");

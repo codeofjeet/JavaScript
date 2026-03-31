@@ -1,0 +1,39 @@
+<html>
+    <head>
+        <title>positive no negative no or zero</title>
+    </head>
+    <body>
+        <script type="text/javascript">
+           function abc()
+           {
+            var no=document.getElementById('n').value;
+            no=parseInt(no);
+                if(no>0)
+                {
+                    document.getElementById("ans").innerText="You enter positive no";
+                    document.getElementById("result").value=no;
+                }
+                else if(no<0)
+                {
+                    document.getElementById("ans").innerHTML="You enter negative no";
+                    document.getElementById("result").value=no;
+                }
+                else
+                {
+                    document.getElementById("ans").innerText="You enter zero";
+                    document.getElementById("result").value=no;
+                }
+           }
+        </script>
+        <label for="no">Enter any no</label>
+        <br>
+        <input type="text" placeholder="Positive, Negative or Zero" id="n" onfocus="this.placeholder=''" onblur="this.placeholder='Positive, Negative or Zero'" >
+        <br><br>
+        <label for="ans" id="ans"></label>
+        <br>
+        <input type="text" placeholder="You no is" id="result">
+        <br><br>
+        <button id="btn" onclick="abc(); return false;">click me </button>
+        </form>
+    </body>
+</html>

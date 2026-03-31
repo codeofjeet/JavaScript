@@ -1,0 +1,21 @@
+<html>
+    <head>
+        <title>example of isExtensible</title>
+    </head>
+    <body>
+        <script type="text/javascript">
+           function name() 
+           {
+            this.myname = "jeetendra" ;
+            this.age= 52;
+            }
+            a1 = new name();
+            document.writeln("Check that object a1 is extensible :- " + Object.isExtensible(a1));
+            document.writeln("<br>Value of object a1<br>" + "Name :- " + a1.myname + "<br>" + "Age :- " + a1.age);
+            a1.salary=30000;
+            document.writeln("<br>After exten (salary) value of object a1<br>" + "Name :- " + a1.myname + "<br>" + "Age :- " + a1.age + "<br>" + "Salary :- " + a1.salary);
+            Object.preventExtensions(a1);
+            document.writeln("<br>After prevent extension check that object a1 is extensible :- " + Object.isExtensible(a1));
+        </script>
+    </body>
+</html>

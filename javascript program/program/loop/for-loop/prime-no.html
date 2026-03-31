@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Prime No</title>
+</head>
+<body>
+    <script>
+        let i, no, c=0;
+        no=parseInt(prompt("Enter any no:- "));
+        for(i=1; i<=no; i=i+1){
+            if(no % i == 0){
+                c = c + 1;
+            }
+        }
+
+        if(c == 2){
+            document.write("Prime no");
+        }
+        else{
+            document.write("Not a prime no");
+        }
+    </script>
+</body>
+</html>

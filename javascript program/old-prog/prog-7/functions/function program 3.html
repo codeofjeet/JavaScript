@@ -1,0 +1,15 @@
+<html>
+    <head>
+        <title>function program 3</title>
+    </head>
+    <body>
+        <script type="text/javascript">
+            var no1,no2,sum;
+            var power = new Function("n1","n2","return Math.pow(n1,n2)");
+            no1=parseInt(prompt("Enter no"));
+            no2=parseInt(prompt("Enter no power"));
+            sum=power(no1,no2);
+            document.write("power of two no is:- " + (sum));
+        </script>
+    </body>
+</html>

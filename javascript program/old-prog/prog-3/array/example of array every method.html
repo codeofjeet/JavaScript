@@ -1,0 +1,17 @@
+<html>
+    <head>
+        <title>example of array every method</title>
+    </head>
+    <body>
+        <script type="text/javascript">
+           var emp = new Array(30,45,50,25,90);
+           var emp1 = new Array(50,45,35); 
+           function check(value)
+           {
+            return value>30;
+           }
+           document.writeln(emp.every(check)); //emp array main check karega ki 30 se big no hai
+           document.writeln("<br>" + emp1.every(check));
+        </script>
+    </body>
+</html>

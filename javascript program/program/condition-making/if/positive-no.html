@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=h1h, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        h1{
+            text-align: center;
+            color: red;
+        }
+    </style>
+</head>
+<body>
+    <h1 id="heading"></h1>
+
+    <script>
+        const h1 = document.getElementById('heading');
+        let no;
+        no = parseInt(prompt("Enter any no :- "));
+        if(no > 0){
+            h1.innerHTML = "Positive no";
+        }
+    </script>
+</body>
+</html>

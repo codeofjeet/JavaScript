@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>3 digit sum</title>
+</head>
+<body>
+    <script>
+        let no, sum=0, a;
+        no=parseInt(prompt("Enter 3 digit no:- "))
+        a= no%10;
+        sum=sum+a;          
+        no=parseInt(no/10);
+        
+        a=no%10;
+        sum=sum+a;
+        no=parseInt(no/10);
+
+        a=no%10;
+        sum=sum+a;
+        document.write(`sum of 3 digit is ${sum}`);
+        </script>
+</body>
+</html>

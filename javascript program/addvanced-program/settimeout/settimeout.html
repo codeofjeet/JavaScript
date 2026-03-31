@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Set Time Out</title>
+    <style>
+        h1{
+            text-align: center;
+            color: blue;
+        }
+
+        button{
+            display: block;
+            padding: 10px 20px;
+            background-color: lightslategray;
+            color: white;
+            font-family: Arial, Helvetica, sans-serif;
+            font-size: 18px;
+            font-weight: 600;
+            border: none;
+            border-radius: 5px;
+            margin: 10px auto;
+        }
+    </style>
+</head>
+<body>
+    <h1 id="heading">Welcome to JavaScript</h1>
+    <button id="stop">Stop</button>
+
+    <script>
+        // setTimeout(function() {
+        //     document.getElementById('heading').innerHTML="This is example of setTimeout function";
+        // },2000);
+
+        const msg = function(){
+            document.getElementById('heading').innerHTML="This is example of setTimeout function";
+            // document.querySelector('h1').innerHTML="This is example of setTimeout function";
+        }
+        const stop = setTimeout(msg, 2000);
+
+        document.querySelector('#stop').addEventListener('click', function(){
+            clearTimeout(stop);
+        })
+    </script>
+</body>
+</html>

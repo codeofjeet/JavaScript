@@ -1,0 +1,23 @@
+<html>
+    <head>
+        <title>chap-1, 4 digit reverse no</title>
+    </head>
+    <body>
+        <script type="text/javascript">
+            var no,rev=0,a;
+            no=parseInt(prompt("Enter 4 digit no :-"));
+            a=no%10;
+            rev=rev*10+a;
+            no=parseInt(no/10);
+            a=no%10;
+            rev=rev*10+a;
+            no=parseInt(no/10);
+            a=no%10;
+            rev=rev*10+a;
+            no=parseInt(no/10);
+            rev=rev*10+no;
+            document.write("No is :- " + (no));
+            document.write("Reverse no is :-" + (rev));
+        </script>
+    </body>
+</html>

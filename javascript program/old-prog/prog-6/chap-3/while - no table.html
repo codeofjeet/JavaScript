@@ -1,0 +1,28 @@
+<html>
+    <head>
+        <title>while-no table</title>
+    </head>
+    <body>
+        <script type="text/javascript">
+           function abc()
+           {
+            var i=1;
+            var no=document.getElementById("n").value;
+            no=parseInt(no);
+            var ans;
+                while(i<=10)
+                {
+                    ans=no*i;
+                    document.writeln(ans + "<br>");
+                    i++;
+                }
+           }
+           
+        </script>
+        <label>Enter any no</label>
+        <br>
+        <input type="text" placeholder="Only Positive no" id="n" onfocus="this.placeholder=''" onblur="this.placeholder='Only Positive no'" >
+        <br><br>
+        <button id="btn" onclick="abc(); return false;">click me </button>
+    </body>
+</html>

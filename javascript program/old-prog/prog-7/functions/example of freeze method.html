@@ -1,0 +1,23 @@
+<html>
+    <head>
+        <title>example of freeze method</title>
+    </head>
+    <body>
+        <script type="text/javascript">
+           function name() 
+           {
+            this.myname = "jeetendra" ;
+            this.age= 52;
+            }
+        var a1 = new name();
+        document.writeln("value of object a1 <br>");
+        document.writeln(a1.myname + "<br>");
+        document.writeln(a1.age);
+        document.writeln("<br>Freeze the object a2 and change myname value deepak<br>");
+        var a2 = Object.freeze(a1);
+        a2.myname="deepak";
+        document.writeln(a2.myname + "<br>");
+        document.writeln(a2.age);
+        </script>
+    </body>
+</html>

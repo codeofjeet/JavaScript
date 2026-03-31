@@ -1,0 +1,19 @@
+<html>
+    <head>
+        <title>example of match()</title>
+    </head>
+    <body>
+        <script type="text/javascript">
+        //match() method is case sencetive and its return searching string if string found
+        var n1="Deepak Kumar Mulchandani";
+        var v1 = n1.match('Kumar');
+        var v2 = n1.match('kumar');
+        var v3 = n1.match(/kumar/i); // i used for ignore case
+        document.writeln("Your name is :- " + n1);
+        document.writeln("<br>If search 'Kumar' in your name :- " + v1);
+        document.writeln("<br>If search 'kumar' in your name :- " + v2);
+        document.writeln("<br>If answer is Null than searching string is not found in main string")
+        document.writeln("<br>If search 'kumar' in your name and used 'i' for ignore case :- " + v3);
+        </script>
+    </body>
+</html>

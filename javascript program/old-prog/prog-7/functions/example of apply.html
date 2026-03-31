@@ -1,0 +1,33 @@
+<html>
+    <head>
+        <title>example of apply</title>
+    </head>
+    <body>
+        <script type="text/javascript">
+           function Car(type, fuelType)
+           {
+            this.type=type;
+            this.fuelType=fuelType;
+           }
+
+           function setBrand(brand)
+           {
+            Car.apply(this, ["convertible", "petrol"]); // syntax with array literal
+            this.brand=brand;
+           /* document.writeln(this.type + "<br>");
+            document.writeln(this.fuelType + "<br>");
+            document.writeln(this.brand);*/
+           document.writeln("First car details<br>" + this.type +"<br>" + this.fuelType + "<br>" + this.brand + "<br>");
+           }
+
+           function definePrice(price)
+           {
+            Car.apply(this, new Array("convertible", "diesel")); //syntax with array object construction
+            this.price=price;
+            document.writeln("<br>Second car details<br>" + this.type +"<br>" + this.fuelType + "<br>" + this.price);
+           }
+           var nb = new setBrand("Brand1");
+           var np = new definePrice(100000);
+        </script>
+    </body>
+</html>

@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Image Slider</title>
+  <style>
+  * {
+      box-sizing: border-box;
+      margin: 0;
+      padding: 0;
+    }
+
+    body {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      height: 100vh;
+      background: #111;
+    }
+
+    .slider-container {
+      width: 600px;
+      height: 300px;
+      overflow: hidden;
+      position: relative;
+      border: 4px solid #fff;
+    }
+
+    .slider {
+      display: flex;
+      width: 100%;
+      height: 100%;
+      position: absolute;
+      top: 0;
+      left: 0;
+      animation: slideShow 10s steps(2)  infinite;
+    }
+
+    .slide {
+      width: 600px;
+      height: 300px;
+      flex-shrink: 0;
+    }
+
+    .slide img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+    }
+
+    @keyframes slideShow {
+      0%   { transform: translateX(0); }
+      20%  { transform: translateX(-600px); }
+      40%  { transform: translateX(-1200px); }
+      60%  { transform: translateX(-1800px); }
+      80%  { transform: translateX(-2400px); }
+      100% { transform: translateX(0); }
+    }
+  </style>
+</head>
+<body>
+
+<div class="slider-container">
+  <div class="slider">
+    <div class="slide"><img src="images/gym-pic-1.jpg"></div>
+    <div class="slide"><img src="images/gym-pic-2.jpg"></div>
+    <div class="slide"><img src="images/gym-pic-3.jpg"></div>
+    <div class="slide"><img src="images/gym-pic-4.jpg"></div>
+    <div class="slide"><img src="images/gym-pic-5.jpg"></div>
+  </div>
+</div>
+
+</body>
+</html>

@@ -1,0 +1,40 @@
+<html>
+    <head>
+        <title>while-prime no</title>
+    </head>
+    <body>
+        <script type="text/javascript">
+           function abc()
+           {
+            var i=1;
+            var no=document.getElementById("n").value;
+            no=parseInt(no);
+            var a=0;
+                while(i<=no)
+                {
+                    if(no%i==0)
+                    {
+                        a++;
+                    }
+                    i++;
+                }
+                if(a==2)
+                {
+                    document.getElementById("result").value="prime no";
+                }
+                else
+                {
+                    document.getElementById("result").value="Not a prime no"
+                }
+           }
+           
+        </script>
+        <label>Enter any no</label>
+        <br>
+        <input type="text" placeholder="Only Positive no" id="n" onfocus="this.placeholder=''" onblur="this.placeholder='Only Positive no'" >
+        <br><br>
+        <input type="text" placeholder="No is" id="result">
+        <br><br>
+        <button id="btn" onclick="abc(); return false;">click me </button>
+    </body>
+</html>

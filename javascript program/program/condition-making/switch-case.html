@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    
+    <script>
+        let no1, no2, choice, ans;
+        no1=parseInt(prompt("Enter first no:-"));
+         no2=parseInt(prompt("Enter second no:-"));
+         document.write("<br/>" + "1 for add")
+         document.write("<br/>" + "2 for sub")
+         document.write("<br/>" + "3 for mul")
+         document.write("<br/>" + "4 for div")
+         choice=parseInt(prompt("Enter your choice plz:- "))
+
+         switch(choice){
+            case 1:
+            ans=no1+no2;
+            document.write("Answer is :-" + ans)
+            break;
+
+            case 2:
+            ans=no1-no2;
+            document.write("Answer is :-" + ans)
+            break;
+
+            case 3:
+            ans=no1*no2;
+            document.write("Answer is :-" + ans)
+            break;
+
+            case 4:
+            ans=parseInt(no1/no2);
+            document.write("Answer is :-" + ans)
+            break;
+            
+            default:
+                document.write("Wrong choice")
+         }
+
+    </script>
+</body>
+</html>

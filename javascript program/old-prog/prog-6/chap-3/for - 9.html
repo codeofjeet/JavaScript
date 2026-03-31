@@ -1,0 +1,44 @@
+<html>
+    <head>
+        <title>for - 9</title>
+    </head>
+    <body>
+        <script type="text/javascript">
+           function abc()
+           {
+            var i;
+            var j;
+            var a="";
+            var k;
+            var l;
+            var no=65;
+            var no1
+                for(i=1;i<=4;i++)
+                {
+                    no1=no;
+                    for(k=4;k>=i;k--)
+                    {
+                        a+="   ";
+                    }
+                    for(j=1;j<=i;j++)
+                    {
+                       a+=String.fromCharCode(no1) + " ";
+                       no1--;
+                       //charCodeAt() method se character ki ascii value find hoti hain*/
+                    }
+                    no1=66;
+                    for(l=2;l<=i;l++)
+                    {
+                        a+=String.fromCharCode(no1) + " ";
+                        no1++;
+                    }
+                    a+="\n";
+                    no++;
+                }
+                alert(a);
+           }
+           
+        </script>
+        <button id="btn" onclick="abc(); return false;">click me </button>
+    </body>
+</html>

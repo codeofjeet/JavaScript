@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    
+    <script>
+        let no1, no2, no3, temp;
+        no1=parseInt(prompt("Enter first no"));
+        no2=parseInt(prompt("Enter second no"));
+        no3=parseInt(prompt("Enter third no"));
+
+        if(no1 > no2){
+            temp=no1;
+            no1=no2;
+            no2=temp;
+        }
+
+        if(no1 > no3){
+            temp=no1;
+            no1=no3;
+            no3=temp;
+        }
+
+        if(no2 > no3){
+            temp=no2;
+            no2=no3;
+            no3=temp;
+        }
+        document.write("<br/> no1 is :-", no1);
+        document.write("<br/> no2 is :-", no2);
+        document.write("<br/> no3 is :-", no3);
+    </script>
+</body>
+</html>

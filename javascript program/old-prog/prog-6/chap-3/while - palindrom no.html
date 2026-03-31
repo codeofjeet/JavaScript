@@ -1,0 +1,39 @@
+<html>
+    <head>
+        <title>while-palindrom no</title>
+    </head>
+    <body>
+        <script type="text/javascript">
+           function abc()
+           {
+            var no=document.getElementById("n").value;
+            no=parseInt(no);
+            var rev=0;
+            var a;
+            var n=no;
+                while(no>0)
+                {
+                    a=no%10;
+                    rev=rev*10+a;
+                    no=parseInt(no/10);   
+                }
+                if(n==rev)
+                {    
+                    document.getElementById("result").value="no is palindrom no";
+                }
+                else
+                {
+                    document.getElementById("result").value="no is not palindrom no";
+                }
+           }
+           
+        </script>
+        <label>Enter any no</label>
+        <br>
+        <input type="text" placeholder="Only Positive no" id="n" onfocus="this.placeholder=''" onblur="this.placeholder='Only Positive no'" >
+        <br><br>
+        <input type="text" placeholder="no is" id="result">
+        <br><br>
+        <button id="btn" onclick="abc(); return false;">click me </button>
+    </body>
+</html>

@@ -1,0 +1,22 @@
+<html>
+    <head>
+        <title>chap-1, 4 digit sum</title>
+    </head>
+    <body>
+        <script type="text/javascript">
+            var no,sum=0,a;
+            no=parseInt(prompt("Enter 4 digit no :-"));
+            a=no%10;
+            sum=sum+a;
+            no=parseInt(no/10);
+            a=no%10;
+            sum=sum+a;
+            no=parseInt(no/10);
+            a=no%10;
+            sum=sum+a;
+            no=parseInt(no/10);
+            sum=sum+no;
+            document.write("Sum of 4 digit no is :- " + (sum));
+        </script>
+    </body>
+</html>

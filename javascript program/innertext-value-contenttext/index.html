@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>innerText, value, and textContent</title>
+</head>
+<body>
+    <h1>innerText</h1>
+    <ol>
+        <li>Used for: Getting or setting the visible (rendered) text inside an HTML element.</li>
+        <li>Ignores: Hidden elements (e.g., display: none or visibility: hidden).</li>
+        <li>Triggers layout reflow: Slower in performance.</li>
+        <li>HTML tags: Not included — only visible text.</li>
+    </ol>
+
+    <div id="example1">Hello <b>World</b></div>
+    <p>Output is:- <span id="inrtxt"></span></p>
+
+    <br/>
+    <hr width="50%"/>
+    <br/>
+
+    <h1>textContent</h1>
+    <ol>
+        <li>Used for: Getting or setting the all text content, including text inside hidden elements.</li>
+        <li>Faster: Doesn’t trigger layout recalculations.</li>
+        <li>Ignores styling: Returns all raw text, regardless of visibility.</li>
+        <li>HTML tags: Not included — only raw text.</li>
+    </ol>
+
+    <div id="example2" style="display:none">Hidden <b>Text</b></div>
+    <p>Output is:- <span id="txtcntnt"></span></p>
+
+    <br/>
+    <hr width="50%"/>
+    <br/>
+
+    <h1>value</h1>
+    <ol>
+        <li>Used for: Getting or setting the value of form elements like input, textarea, select.</li>
+        <li>Not applicable to non-form elements.</li>
+    </ol>
+
+    <input type="text" id="example3" value="Hi welcome to JS"/> 
+    <p>Output is:- <span id="vl"></span></p>
+
+
+    <script>
+        const it=document.getElementById("example1").innerText;
+        document.getElementById('inrtxt').innerHTML=it;
+
+        const tc=document.getElementById("example2").textContent;
+        document.getElementById('txtcntnt').innerHTML=tc;
+
+        const vol=document.getElementById("example3").value;
+        document.getElementById('vl').innerHTML=vol;
+    </script>
+</body>
+</html>

@@ -1,0 +1,407 @@
+https://www.shiksha.com/it-software/javascript-syllabus-chp
+https://www.javascriptinstitute.org/syllabus/
+
+
+
+1. Introduction to JavaScript
+1.1 What is JavaScript?
+Definition and purpose
+
+Role in web development
+
+Client-side vs server-side JS (Node.js)
+
+How browsers run JavaScript (JS engine, V8, SpiderMonkey)
+
+1.2 Adding JavaScript to Web Pages
+Inline scripts
+
+Internal & external JS files
+
+<script> tag basics
+
+defer and async
+
+2. JavaScript Basics
+2.1 Syntax & Fundamentals
+Statements & semicolons
+
+Comments
+
+Case sensitivity
+
+Code blocks { }
+
+2.2 Variables
+var, let, const
+
+Scope (function, block, global)
+
+Hoisting
+
+2.3 Data Types
+Primitive types:
+
+Number, String, Boolean, Null, Undefined, BigInt, Symbol
+
+Reference types:
+
+Objects, Arrays, Functions
+
+typeof operator
+
+2.4 Operators
+Arithmetic
+
+Assignment
+
+Comparison
+
+Logical
+
+Ternary operator
+
+Spread & rest (...)
+
+Nullish coalescing ??
+
+Optional chaining ?.
+
+3. Control Flow
+3.1 Conditional Statements
+if, else, else if
+
+switch
+
+3.2 Loops
+for, while, do...while
+
+for...of, for...in
+
+Break & continue
+
+3.3 Error Handling
+try...catch
+
+throw
+
+finally
+
+Custom errors
+
+4. Functions
+4.1 Function Types
+Function declaration
+
+Function expression
+
+Arrow functions
+
+Anonymous functions
+
+Callback functions
+
+4.2 Advanced Function Concepts
+Parameters & arguments
+
+Default parameters
+
+Spread & rest
+
+Higher-order functions
+
+Closures
+
+IIFE (Immediately Invoked Function Expression)
+
+Function scope & lexical scope
+
+5. Objects & Object-Oriented JavaScript
+5.1 Object Basics
+Object creation methods
+
+Property access
+
+Modifying objects
+
+Nested objects
+
+this keyword
+
+5.2 Object Methods
+Object.keys(), Object.values(), Object.entries()
+
+Destructuring objects
+
+Object spread operator
+
+5.3 Prototypes
+Prototype inheritance
+
+__proto__ & prototype chain
+
+Prototype vs class
+
+5.4 JavaScript Classes
+Class declaration & constructor
+
+Methods
+
+Inheritance with extends
+
+Static properties/methods
+
+Private fields (#)
+
+6. Arrays
+6.1 Array Basics
+Creating arrays
+
+Accessing elements
+
+Array properties
+
+6.2 Array Methods
+Adding/removing:
+
+push, pop, shift, unshift
+
+Search:
+
+indexOf, includes, find, findIndex
+
+Modification:
+
+slice, splice, concat, sort, reverse
+
+6.3 Functional Array Methods
+map
+
+filter
+
+reduce
+
+forEach
+
+every, some
+
+7. DOM Manipulation (Document Object Model)
+7.1 DOM Basics
+DOM tree
+
+Selecting elements:
+
+getElementById, querySelector, etc.
+
+Changing content & styles:
+
+.innerHTML, .textContent, .style
+
+7.2 Events
+Event listeners (addEventListener)
+
+Event bubbling & capturing
+
+Event object
+
+Common events: click, input, submit, keydown
+
+7.3 DOM Manipulation
+Creating/removing elements
+
+Adding classes & attributes
+
+Working with forms
+
+8. BOM (Browser Object Model)
+window object
+
+location
+
+history
+
+navigator
+
+Alerts & dialogs
+
+alert, confirm, prompt
+
+9. JavaScript in the Browser
+9.1 Timing Functions
+setTimeout
+
+setInterval
+
+9.2 Local Storage
+localStorage
+
+sessionStorage
+
+Cookies
+
+10. Asynchronous JavaScript
+10.1 Callback Functions
+Synch vs Asynch behavior
+
+Callback hell
+
+10.2 Promises
+Creating promises
+
+.then() & .catch()
+
+Promise.all, Promise.race
+
+10.3 Async/Await
+Writing asynchronous code cleanly
+
+Error handling in async functions
+
+10.4 Event Loop
+Call stack
+
+Microtask & macrotask queue
+
+11. Handling HTTP Requests
+11.1 Fetch API
+GET & POST requests
+
+Handling responses & JSON
+
+11.2 Axios (Optional)
+Basic usage
+
+Interceptors
+
+11.3 APIs
+REST APIs
+
+Public APIs
+
+Authentication basics (JWT, API keys)
+
+12. Modules
+ES6 modules
+
+import / export
+
+Default exports
+
+Module bundlers: Webpack, Parcel, Vite
+
+13. Error Handling & Debugging
+Console methods
+
+Breakpoints
+
+Try/catch
+
+Linting (ESLint)
+
+14. Advanced JavaScript
+14.1 Execution Context
+Global and function execution context
+
+Variable environment & lexical environment
+
+14.2 Hoisting
+How variables & functions are hoisted
+
+14.3 Closures
+Real-world examples
+
+Memory management
+
+14.4 Functional Programming
+Pure functions
+
+Immutability
+
+Currying
+
+Composition
+
+14.5 Generators
+function* syntax
+
+yield
+
+Iterator protocol
+
+14.6 Web Components
+Custom elements
+
+Shadow DOM
+
+Templates
+
+15. JavaScript Frameworks & Libraries
+(Overview only—optional advanced path)
+
+15.1 Frontend Frameworks
+React
+
+Vue
+
+Angular
+
+15.2 Backend with Node.js
+Node.js basics
+
+Express.js
+
+NPM & packages
+
+16. Tools & Environment
+Code editors (VS Code)
+
+NPM & Yarn
+
+Babel
+
+Webpack / Vite
+
+17. Project Work (Beginner → Advanced)
+Beginner Projects
+Calculator
+
+Todo app
+
+Form validation
+
+Intermediate Projects
+Weather app (API)
+
+Quiz app
+
+Notes app with localStorage
+
+Advanced Projects
+Chat app
+
+E-commerce mini site
+
+Single Page Application (SPA)
+
+Node.js REST API
+
+If you want, I can also create:
+✅ A PDF version
+✅ A step-by-step learning plan (30-day, 60-day, 90-day)
+✅ A roadmap graphic
+✅ A full notes book based on this syllabus
+
+Would you like any of these?
+
+
+
+
+Attach
+
+Search
+
+Study
+
+Voice
+No file chosenNo file chosen
+ChatGPT can make mistakes. Check important info. See Cookie Preferences.

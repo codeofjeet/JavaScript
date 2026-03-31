@@ -1,0 +1,12 @@
+.quotes{
+    width: 80%;
+    height: auto;
+    font-size: 100px;
+    font-family: Arial, Helvetica, sans-serif;
+    color: white;
+    font-weight: bolder;
+    text-shadow: 4px 5px 8px #000000;
+    margin: 100px;
+    text-align: center;
+}
+

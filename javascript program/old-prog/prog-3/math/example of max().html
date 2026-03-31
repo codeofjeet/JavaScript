@@ -1,0 +1,21 @@
+<html>
+    <head>
+        <title>example of max()</title>
+    </head>
+    <body>
+        <script type="text/javascript">
+        var n1= new Array(23,45,67,34,89);
+        document.writeln("Orignal no is :- " + n1)
+        document.writeln("<br>Max no is :- " + Math.max(23,45,67,34,89));
+        var max=0;
+        for(var i=0;i<n1.length;i++)
+        {
+            if(max<n1[i])
+            {
+                max=n1[i];
+            }
+        }
+        document.writeln("<br>Max no is :- " + max);
+        </script>
+    </body>
+</html>

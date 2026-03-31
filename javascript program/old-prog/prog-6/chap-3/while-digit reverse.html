@@ -1,0 +1,31 @@
+<html>
+    <head>
+        <title>while-digit reverse</title>
+    </head>
+    <body>
+        <script type="text/javascript">
+           function abc()
+           {
+            var no=document.getElementById("n").value;
+            no=parseInt(no);
+            var rev=0;
+            var a;
+                while(no>0)
+                {
+                    a=no%10;
+                    rev=rev*10+a;
+                    no=parseInt(no/10);   
+                }
+                    document.getElementById("result").value=rev;
+           }
+           
+        </script>
+        <label>Enter any no</label>
+        <br>
+        <input type="text" placeholder="Only Positive no" id="n" onfocus="this.placeholder=''" onblur="this.placeholder='Only Positive no'" >
+        <br><br>
+        <input type="text" placeholder="Digit reverse is" id="result">
+        <br><br>
+        <button id="btn" onclick="abc(); return false;">click me </button>
+    </body>
+</html>

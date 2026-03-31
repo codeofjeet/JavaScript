@@ -1,0 +1,46 @@
+<html>
+    <head>
+        <title>while-Total even and odd no</title>
+    </head>
+    <body>
+        <script type="text/javascript">
+           function abc()
+           {
+            var no=document.getElementById("n").value;
+            no=parseInt(no);
+            var a;
+            var en=0;
+            var on=0;
+                while(no>0)
+                {
+                    a=no%10;
+                        if(a%2==0)
+                        {
+                            en++;
+                        }
+                        else
+                        {
+                            on++;
+                        }
+                    no=parseInt(no/10);
+                }
+                document.getElementById("e").value=en;
+                document.getElementById("o").value=on;
+           }
+           
+        </script>
+        <label>Enter any no</label>
+        <br>
+        <input type="text" placeholder="Only Positive no" id="n" onfocus="this.placeholder=''" onblur="this.placeholder='Only Positive no'" >
+        <br><br>
+        <label>Total Even no</label>
+        <br>
+        <input type="text" placeholder="Even no" id="e" onfocus="this.placeholder=''" onblur="this.placeholder='Even no'" >
+        <br><br>
+        <label>Total Odd no</label>
+        <br>
+        <input type="text" placeholder="Odd no" id="o" onfocus="this.placeholder=''" onblur="this.placeholder='Odd no'">
+        <br><br>
+        <button id="btn" onclick="abc(); return false;">click me </button>
+    </body>
+</html>

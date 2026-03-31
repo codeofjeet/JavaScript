@@ -1,0 +1,30 @@
+<html>
+    <head>
+        <title>example of Object assign() method - 3</title>
+    </head>
+    <body>
+        <script type="text/javascript">
+       const person={
+        fistName: "Deepak",
+        lastName: "Mulchandani",
+        age: 35,
+       }
+
+       const nperson={
+        fistName: "Jeetendra"
+       }
+
+       const nperson1={
+        lastName: "Gangwar"
+       }
+
+       const nperson2={
+        age: 53
+       }
+
+       const newperson = Object.assign({salary: 25000},person,nperson,nperson1,nperson2);
+      console.log(newperson);
+        </script>
+        <p id="demo"></p>
+    </body>
+</html>

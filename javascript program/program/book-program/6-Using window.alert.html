@@ -1,0 +1,18 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Using window.alert()</title>
+</head>
+<body>
+    
+    <script>
+        // The alert method is technically a property of window object, but since all window properties are automatically global variables, we can use alert as a global variable instead of as a property of window - meaning you can directly use alert() instead of window.alert().
+        window.alert("Hi! Welcome to JavaScript");
+        console.log('Alert was dismissed');
+        alert("Hi! Welcome to JavaScript again");
+        // console.log('Alert was dismissed');
+    </script>
+</body>
+</html>

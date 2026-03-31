@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>String-1</title>
+</head>
+<body>
+    <h1>String</h1>
+    <h3>Strings in JavaScript can be enclosed in Single quotes 'hello', Double quotes "Hello" and (from ES2015, ES6) in Template Literals (backticks) `hello`.</h3>
+
+    <script>
+        let s1 = "Welcome to JS";
+        let s2 = 'I love JavaScript';
+        let newstr = `This is new type to create string`;
+        document.writeln(s1);
+        document.writeln("<br />", s2);
+        document.writeln("<br />",newstr);
+        
+        document.write("<br /> <br />", "<h3>Strings can be created from other types using the String() function. </h3>")
+        let intString = String(32); // "32"
+        let booleanString = String(true); // "true"
+        let nullString = String(null); // "null"
+        document.writeln(intString);
+        document.writeln("<br />", booleanString);
+        document.writeln("<br />",nullString);
+
+        document.write("<br /> <br />", "<h3>toString() can be used to convert Numbers, Booleans or Objects to Strings. </h3>")
+        let intString1 = (5232).toString(); // "5232"
+        let booleanString1 = (false).toString(); // "false"
+        let objString = ({}).toString(); // "[object Object]"
+        document.writeln(intString1);
+        document.writeln("<br />", booleanString1);
+        document.writeln("<br />",objString);
+
+        document.write("<br /> <br />", "<h3>Strings also can be created by using String.fromCharCode method. </h3>")
+        document.write(String.fromCharCode(104,101,108,108,111))//"hello"
+
+         document.write("<br /> <br />", "<h3>Creating a String object using new keyword is allowed, but is not recommended as it behaves like Objects unlike primitive strings. </h3>")
+        
+        let objectString = new String("Yes, I am a String object");
+        document.write(typeof objectString);
+        document.write("<br />",typeof objectString.valueOf());
+
+
+
+    </script>
+</body>
+</html>

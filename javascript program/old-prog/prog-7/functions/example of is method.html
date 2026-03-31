@@ -1,0 +1,25 @@
+<html>
+    <head>
+        <title>example of is method</title>
+    </head>
+    <body>
+        <script type="text/javascript">
+           function name() 
+           {
+            this.myname = "jeetendra" ;
+            this.age= 52;
+            }
+            function name1() 
+           {
+            this.myname = "jeetendra" ;
+            this.age= 52;
+            }
+
+            a1 = new name();
+            a2 = new name1();
+            document.writeln("Compared object a1 to a1 :- " + Object.is(a1,a1));
+            document.writeln("<br> Compared object a1 to a2 :- " + Object.is(a1,a2));
+            document.writeln("<br>Compared object a1.age to a2.age :- " + Object.is(a1.age,a2.age));
+        </script>
+    </body>
+</html>

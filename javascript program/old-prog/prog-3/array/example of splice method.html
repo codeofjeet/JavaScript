@@ -1,0 +1,18 @@
+<html>
+    <head>
+        <title>example of splice method</title>
+    </head>
+    <body>
+        <script type="text/javascript">
+        //add or delete current array)(start postion, delete .....element)
+        var no=[1,2,3,5,6,7];
+        document.writeln("no is :- " + no);
+        var no1=no.splice(3,0,4);
+        document.writeln("<br>After apply splice (add 4) method no is :- " + no);
+        document.write("<br>Value of no1 (no1=no.splice(3,0,4)) is :- " + no1);
+        var no1=no.splice(2,2,10);
+        document.writeln("<br>After apply splce (delete 2 value and add 10) method no is :-" + no);
+        document.writeln("<br>Value of no1 (no1=no.splice(2,2,10)) is :- " + no1);
+        </script>
+    </body>
+</html>

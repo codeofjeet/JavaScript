@@ -1,0 +1,46 @@
+<html>
+    <head>
+        <title>Telephone Bill</title>
+    </head>
+    <body>
+        <script type="text/javascript">
+           function abc()
+           {
+            var tc=document.getElementById("t").value;
+            tc=parseInt(tc);
+            var ba;
+                if(tc<=100)
+                {
+                    ba=tc*.50;
+                }
+                else if(tc<=200)
+                {
+                    ba=50+(tc-100)*.80;
+                }
+                else if(tc<=300)
+                {
+                    ba=130+(tc-200)*1.20;
+                }
+                else if(tc<=400)
+                {
+                    ba=250+(tc-300)*1.80;
+                }
+                else
+                {
+                    ba=430+(tc-400)*2;
+                }
+            document.getElementById('result').value=ba;
+           }
+        </script>
+        <label for="tc">Telephone Calls</label>
+        <br>
+        <input type="text" placeholder="Enter total telephone calls" id="t" onfocus="this.placeholder=''" onblur="this.placeholder='Enter total telephone calls'" >
+        <br><br>
+        <label for="bill">Total Bill Amount</label>
+        <br>
+        <input type="text" placeholder="Bill Amount" id="result">
+        <br><br>
+        <button id="btn" onclick="abc(); return false;">click me </button>
+        </form>
+    </body>
+</html>

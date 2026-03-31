@@ -1,0 +1,33 @@
+<html>
+    <head>
+        <title>chap-1, add one at every digit</title>
+    </head>
+    <body>
+        <script type="text/javascript">
+            var no,x=10,a=1,n,temp;
+            no=parseInt(prompt("Enter 4 digit no :-"));
+            n=no;
+            temp=(no%1x)+a;
+            no=parseInt(no/x);
+            no=no*x+temp;
+            x=x*10;
+            a=a*10;
+            temp=(no%x)+a;
+            no=parseInt(no/x);
+            no=no*x+temp;
+            x=x*10;
+            a=a*10;
+            temp=(no%x)+a;
+            no=parseInt(no/x);
+            no=no*x+temp;
+            x=x*10;
+            a=a*10;
+            temp=(no%x)+a;
+            no=no/x;
+            no=no*x+temp;
+            document.write("No is :- " + (n));
+            document.write("<br>");
+            document.write("After add one at every digit no is :-" + (sum));
+        </script>
+    </body>
+</html>

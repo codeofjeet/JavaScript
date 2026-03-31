@@ -1,0 +1,49 @@
+<html>
+    <head>
+        <title>while-prime fectors</title>
+    </head>
+    <body>
+        <script type="text/javascript">
+           function abc()
+           {
+            var no=document.getElementById("n").value;
+            no=parseInt(no);
+            var c=1;
+            var i=2;
+            var a;
+            var j;
+                while(i<no)
+                {
+                    if(no%i==0)
+                    {
+                        a=0;
+                        j=1;
+                            while(j<=i)
+                            {
+                                if(i%j==0)
+                                {
+                                    a++;
+                                }
+                            j++;
+                            }
+                            if(a==2)
+                            {
+                                c=c + " " + i;
+                            }
+                    }
+                    
+                    i++;
+                }
+                document.getElementById("result").value=c;
+           }
+           
+        </script>
+        <label>Enter any no</label>
+        <br>
+        <input type="text" placeholder="Only Positive no" id="n" onfocus="this.placeholder=''" onblur="this.placeholder='Only Positive no'" >
+        <br><br>
+        <input type="text" placeholder="Prime fectors are" id="result">
+        <br><br>
+        <button id="btn" onclick="abc(); return false;">click me </button>
+    </body>
+</html>

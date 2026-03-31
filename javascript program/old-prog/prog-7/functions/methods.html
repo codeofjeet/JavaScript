@@ -1,0 +1,50 @@
+<html>
+    <head>
+        <title>example of javascript methods</title>
+    </head>
+    <body>
+        <script type="text/javascript">
+       //using an object constructor
+        document.writeln("<br>Example of methods<br>");
+        function employee(rno,name)
+        {
+            this.rno=rno;
+            this.name=name;
+            this.division=division;
+            function division(s1,s2,s3)
+            {
+            var per;
+                this.s1=s1;
+                this.s2=s2;
+                this.s3=s3
+                this.per=parseInt(this.s1+this.s2+this.s3)/3;
+                if(this.per>=60)
+                {
+                    document.writeln("<br>First Division");
+                }
+                else if(this.per>=48)
+                {
+                    document.writeln("<br>Second Division");
+                }
+                else if(this.per>=36)
+                {
+                    document.writeln("<br>Third Divsion");
+                }
+                else
+                {
+                    document.writeln("<br>Fail")
+                }
+            }
+        }
+        var rn=parseInt(prompt("Enter your roll no"));
+        var nm=prompt("Enter your name");
+        var sb1=parseInt(prompt("Enter first subject marks"));
+        var sb2=parseInt(prompt("Enter second subject marks"));
+        var sb3=parseInt(prompt("Enter third subject marks"));
+        var e1 =  new employee(rn,nm);
+        document.writeln("<br>your roll no is :-" + e1.rno);
+        document.writeln("<br>Your name is :-" + e1.name);
+        e1.division(sb1,sb2,sb3);
+        </script>
+    </body>
+</html>

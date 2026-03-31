@@ -1,0 +1,22 @@
+<html>
+    <head>
+        <title>example of this keyword - 2</title>
+    </head>
+    <body>
+        <script type="text/javascript">
+       //example of this keyword
+       const person={
+        fistName: "Jeetendra",
+        lastName: "Gangwar",
+        age: 52,
+       }
+       person.name= function()
+        {
+            return this.fistName + "<br>" + this.lastName + "<br>" + this.age;
+        }
+      //document.getElementById("demo").value=person.fullName();
+      document.writeln(person.name());
+        </script>
+        <p id="demo"></p>
+    </body>
+</html>

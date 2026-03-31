@@ -1,0 +1,36 @@
+<html>
+    <head>
+        <title>while-factorial no</title>
+    </head>
+    <body>
+        <script type="text/javascript">
+           function abc()
+           {
+            var i=1;
+            var no=document.getElementById("n").value;
+            no=parseInt(no);
+            var p=document.getElementById("p").value;
+            p=parseInt(p);
+            var ans=1;
+                while(i<=p)
+                {
+                    ans=ans*no;
+                    i++;
+                }
+                    document.getElementById("result").value=ans;
+           }
+           
+        </script>
+        <label>Enter any no</label>
+        <br>
+        <input type="text" placeholder="Only Positive no" id="n" onfocus="this.placeholder=''" onblur="this.placeholder='Only Positive no'" >
+        <br><br>
+        <label>Enter power</label>
+        <br>
+        <input type="text" placeholder="Only Positive no" id="p" onfocus="this.placeholder=''" onblur="this.placeholder='Only Positive no'" >
+        <br><br>
+        <input type="text" placeholder="Answer is" id="result">
+        <br><br>
+        <button id="btn" onclick="abc(); return false;">click me </button>
+    </body>
+</html>

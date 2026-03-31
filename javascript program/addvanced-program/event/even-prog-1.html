@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>HTML Event</title>
+    <style>
+        *{
+            padding: 0;
+            margin: 0;
+            font-size: 25px;
+            font-family: Arial, Helvetica, sans-serif;
+        }
+
+        h1{
+            text-align: center;
+        }
+        #pic li img{
+            width: 500px;
+            margin: 20px;
+            box-shadow: rgb(38, 57, 77) 0px 20px 30px -10px;
+            border-radius: 15px;
+        }
+    </style>
+</head>
+<body>
+    <h1>Images</h1>
+
+    <div>
+        <ul id="pic">
+            <li><img src="image/shiv.jpg" id="p1"></li>
+            <li><img src="image/sliderpic1.jpg" id="p2"></li>
+            <li><img src="image/sliderpic2.jpg" id="p3"></li>
+            <li><img src="image/sliderpic3.jpg" id="p4"></li>
+            <li><img src="image/sliderpic4.jpg" id="p5"></li>
+            <li><img src="image/sliderpic5.jpg" id="p6"></li>
+            <li><a href="https://getcssscan.com/css-box-shadow-examples" id="boxshadow">Box Shadow</a></li>
+        </ul>
+    </div>
+
+    <script>
+        // document.getElementById('p2').onclick = function(){
+        //     alert("Second Pic Clicked");
+        // }
+
+
+        // document.getElementById('p2').addEventListener('click', function(){
+        //     alert("Second Pic Clicked");
+        // });
+
+
+        // document.getElementById('p2').addEventListener('click', function(e){
+        //     console.log(e);
+        // }, false);
+
+
+        // document.getElementById('pic').addEventListener('click', function(e){
+        //     console.log("ul list clicked");
+        // }, true);
+
+        // document.getElementById('p2').addEventListener('click', function(e){
+        //     console.log("pic two clicked");
+        // }, true);
+
+
+        // document.getElementById('pic').addEventListener('click', function(e){
+        //     console.log("ul list clicked");
+        // }, false);
+
+        // document.getElementById('p2').addEventListener('click', function(e){
+        //     console.log("pic two clicked");
+        //     e.stopPropagation();
+        // }, false);
+
+        // document.getElementById('boxshadow').addEventListener('click', function(e){
+        //     e.preventDefault();
+        //     e.stopPropagation();
+        //     console.log(" box-shadow clicked");
+        // }, false);
+
+
+        // document.querySelector('#pic').addEventListener('click', function(e){
+        //     console.log(e.target.parentNode);
+        //     let dl = e.target.parentNode;
+        //     dl.parentNode.removeChild(dl); 
+        // })
+
+
+        document.querySelector('#pic').addEventListener('click', function(e){
+            console.log(e.target.tagName);
+            if(e.target.tagName === 'IMG'){
+                console.log(e.target.id);
+                let dl = e.target.parentNode;
+                dl.remove();
+            }
+        })
+    </script>
+</body>
+</html>

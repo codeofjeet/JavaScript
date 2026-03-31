@@ -1,0 +1,32 @@
+<html>
+    <head>
+        <title>example - 2 of bind</title>
+    </head>
+    <body>
+        <script type="text/javascript">
+           let name = {
+            myname: "jeetendra"  
+            }
+
+            let PrintName = {
+                myname: "deepak",
+                fun: function()
+                {
+                    document.writeln(this.myname);
+                }
+            }
+
+            Object.prototype.a1 = function(a2)
+            {
+                a2.myMethod=this;
+                return function()
+                {
+                    a2.myMethod();
+                }
+            }
+
+            let n1 = PrintName.fun.a1(name);
+            n1();
+        </script>
+    </body>
+</html>

@@ -1,0 +1,139 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Console</title>
+</head>
+<body>
+    <script>
+        //Printing to a browser's debugging console 
+        console.log('JavaScript');
+        let obj = { test: 1 };
+        console.log(['string'], 1, obj, window);
+
+        //Beside plain strings, console.log() can handle other types, like arrays, objects, dates, functions, etc.:
+        console.log([0, 3, 32, 'a string']);
+        console.log({ key1: 'value', key2: 'another value'});
+
+        //Nested objects may be collapsed
+        console.log({ key1: 'val', key2: ['one', 'two'], key3: { a: 1, b: 2 } });
+
+        //Certain types such as Date objects and functions may be displayed differently
+        console.log(new Date(1));
+        console.log(function test(a=10, b=20) { return a+b; });
+
+        //console.trace – outputs the current stack trace or displays the same output as the log method if invoked in the global scope.
+        function sec() {
+            first();
+        }
+        function first() {
+            console.trace();
+        }
+        sec();
+
+        //console.table() - can be used to display objects and arrays in a tabular format.
+        let computerProgramming = [
+            {
+                'leanguage': 'C',
+                'duration': '2 month',
+                'fees': 4000
+            },
+
+            {
+                'leanguage': 'C++',
+                'duration': '3 month',
+                'fees': 6500   
+            },
+
+            {
+                'leanguage': 'Java',
+                'duration': '6 month',
+                'fees': 15000
+            },
+
+            {
+                'leanguage': 'Python',
+                'duration': '6 month',
+                'fees': 15000
+            },
+
+            {
+                'leanguage': 'JavaScript',
+                'duration': '5 month',
+                'fees': 8000
+            },
+
+            {
+                'leanguage': 'React JS',
+                'duration': '5 month',
+                'fees': 9000
+            }
+        ];
+        console.table(computerProgramming);
+        console.table(computerProgramming, ['language', 'fees']);
+
+        //console.count()
+        let no1 = 1, no2 = 2, no3 = ''
+        console.count(no1);
+        console.count(no2);
+        console.count(no3);
+        console.count(1);
+        console.count(2);
+        console.count(1);
+        console.count('');
+        console.count(2);
+        console.count("");
+        
+        //Strings with numbers are converted to Number objects
+        console.count("123");
+        console.count(Number('123'));
+        console.count(123);
+        console.count(parseInt('123'));
+        console.count(parseFloat('123'));
+
+        //Functions point always to the global Function object:
+        console.count(console.constructor);
+        console.count(function(){});
+        console.count(Object);
+        let abc = function display(){};
+        console.count(abc);
+        console.count(Number);
+        console.count(parseInt);
+        console.count(parseFloat);
+
+        //Certain objects get specific counters associated to the type of object they refer to
+        console.count(undefined);
+        console.count(document.Batman);
+        let Obj;
+        console.count(Obj);
+        console.count(Number(undefined));
+        console.count(NaN);
+        console.count(NaN+3);
+        console.count(1/0);
+        console.count(String(1/0));
+        console.count(window);
+        console.count(document);
+        console.count(console);
+        console.count(console.__proto__);
+        console.count(console.constructor.prototype);
+        console.count(console.__proto__.constructor.prototype);
+        console.count(Object.getPrototypeOf(console));
+        console.count(null);
+
+        //console.clear - Clearing the console
+        // console.clear()
+
+        //console.dir - Displaying objects
+        var myObject = {
+            "display":{
+            "lengauge":"JavaScript"
+            }
+            };
+        console.dir(myObject);
+
+        //Debugging with assertions
+        console.assert('1' === 1, "Both are not equal in behalf of data type");
+    </script>
+</body>
+</html>

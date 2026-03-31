@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="style.css">
+  <title>3D Image Slider</title>
+</head>
+<body>
+
+<div class="slider-container">
+  <button class="nav-button prev">&#8592;</button>
+  <div class="slider" id="slider">
+    <div class="slide" style="transform: rotateY(0deg) translateZ(500px);">
+      <img src="image/p1.jpg">
+    </div>
+    <div class="slide" style="transform: rotateY(120deg) translateZ(500px);">
+      <img src="image/p2.jpg">
+    </div>
+    <div class="slide" style="transform: rotateY(240deg) translateZ(500px);">
+      <img src="image/p3.jpg">
+    </div>
+  </div>
+  <button class="nav-button next">&#8594;</button>
+</div>
+
+<script src="script.js"></script>
+
+</body>
+</html>

@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Placeholders</title>
+</head>
+<body>
+    
+    <Script>
+        // Placeholders (printf-style %s, %d, %f) These are C-style format specifiers (like in C/C++/Python) and not native to JavaScript strings — but they can be used in console.log() (only in some environments like browsers or Node.js).
+        let name = "Bob";
+        let age = 30;
+        let score = 95.75;
+        console.log("Name: %s, Age: %d, Score: %f", name, age, score);
+
+        // For general string building, always prefer template literals with ${}.
+        console.log(`Name: ${name}, Age: ${age}, Score: ${score.toFixed(2)}`);
+    </Script>
+
+</body>
+</html>

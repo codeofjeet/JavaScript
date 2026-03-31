@@ -1,0 +1,32 @@
+<html>
+    <head>
+        <title>example of min()</title>
+    </head>
+    <body>
+        <script type="text/javascript">
+        var n1= new Array(23,45,67,34,89);
+        document.writeln("Orignal no is :- " + n1)
+        document.writeln("<br>Minimum no is :- " + Math.min(23,45,67,34,89));
+        
+        var min=100;
+        for(var i=0;i<n1.length;i++)
+        {
+            if(min>n1[i])
+            {
+                min=n1[i];
+            }
+        }
+        document.writeln("<br>Minimum no is :- " + min);
+        
+        const min1 = n1.reduce((a,b) => Math.min(a,b));
+        document.writeln("<br>Minimum no is :- " + min1);
+
+        function getMinOfArray(n1)
+        {
+            return Math.min.apply(null,n1);
+        }
+        var min2=getMinOfArray(n1);
+        document.writeln("<br>Minimum no is :- " + min2);
+        </script>
+    </body>
+</html>

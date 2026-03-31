@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>vowels and consonants</title>
+</head>
+<body>
+
+    <script>
+        let str = "Codeofjeet";
+        let nov=0, noc=0;
+        for (let char of str.toLocaleLowerCase()) {
+            if(char ==='a' || char === 'e' || char ==='i' || char === 'o' || char === 'u'){
+                nov++;
+            } else{
+                noc++;
+        }
+        }
+       console.log("No of vowels :- ", nov);
+       console.log("<br />No of consonants :- ", noc);
+    </script>
+</body>
+</html>

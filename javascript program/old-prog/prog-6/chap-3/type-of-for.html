@@ -1,0 +1,182 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+    //for of loop
+    const no = [1,2,3,4,5]
+    for (const i of no) {
+        document.write(i,"<br/>")
+    }
+
+    const name = "Deepak"
+    for (const i of name) {
+    document.write(`Each char of string :- ${i}`, "<br/>")
+    }
+
+    document.write("<br/>")
+
+    //Maps
+    const map = new Map()
+    map.set('JS', "JavaScript")
+    map.set('CPP', "C++")
+    map.set('PY', "Python")
+    map.set('CPP', "C++")
+    console.log(map)
+    for (const [key, value] of map) {
+        document.write(`Key is :- ${key} and value is :- ${value}`, "<br/>")
+    }
+
+    //Map is not iterable for in loop
+    for (const key in map) {
+        document.write(key)
+    }
+
+    document.write("<br/>")
+
+    //object
+    const myObject = {
+        'JS' : 'JavaScript',
+        'CPP' : 'C++',
+        'PY' : 'Python'
+    }
+
+    //Object is not iterable
+    // for (const [key, value] of myObject) {
+    //     document.write(`Key is :- ${key} and value is :- ${value}`, "<br/>")
+    // }       
+
+    // for in
+    for (const key in myObject) {
+    document.write(`key of object ${key} and value of key ${myObject[key]}`,"<br/>")
+    }
+
+    document.write("<br/>")
+
+    //key and value of array
+    const no1 = [23,69,12,90]
+    for (const key in no1) {
+        document.write(`key of array ${key} and value of key ${no1[key]}`, "<br/>")
+    }
+
+    document.write("<br/>")
+
+    // higher-order function (HOF) forEach
+    // Takes one or more functions as arguments (callback functions).
+
+    const leng = ["JavaScript", "Python", "Java", "CPP"]
+    leng.forEach(function(item){
+        document.write(item , "<br/>")
+    });
+
+    document.write("<br/>", "Arrow Function", "<br/>")
+    leng.forEach( (item) => {
+        document.write(item, "<br/>")
+    });
+
+    document.write("<br/>", "Using printValue function", "<br/>")
+    function printValue(item){
+        document.write(item, "<br/>")
+    }
+    leng.forEach(printValue)
+
+    document.write("<br/>", "using forEach with multiple arrgument", "<br/>")
+
+    leng.forEach( (item, index, arr) => {
+        document.write(item, " ----- ", index, " ----- ", arr, "<br/>")
+    })
+
+    document.write("<br/>", "Array with object", "<br/>")
+
+    const language = [
+    {
+        languageName : "javascript",
+        fileName : "js"
+    },
+
+    {
+        languageName : "java",
+        fileName : "java"
+    },
+
+    {
+        languageName : "C++",
+        fileName : "cpp"
+    }
+]
+
+    language.forEach( (item) => {
+        document.write(item.languageName, "<br/>")
+    })
+
+    const num = [34, 56, 7, 23, 97 ,43, 65, 62, 20]
+    const result = []
+    num.forEach( (item) => {
+      if(item % 2 == 0){
+      result.push(item)
+    }    
+    })
+
+    document.write("<br/>", result, "<br/>")
+
+// filter
+    const result1=num.filter( (item) => item % 2 == 0)
+    document.write(result1, "<br/>")
+
+const Lang = [
+    {
+        language : "C",
+        duration : "2 months",
+        fees : 4500
+    },
+
+    {
+        language : "C++",
+        duration : "4 months",
+        fees : 7000
+    },
+
+    {
+        language : "java",
+        duration : "6 months",
+        fees : 15000
+    },
+
+    {
+        language : "python",
+        duration : "7 months",
+        fees : 16000
+    },
+
+    {
+        language : "javascript",
+        duration : "6 months",
+        fees : 12000
+    },
+
+    {
+        language : "mysql",
+        duration : "2 months",
+        fees : 4000
+    },
+
+    {
+        language : "react",
+        duration : "6 months",
+        fees : 13000
+    }
+]
+
+let userResult = Lang.filter( (item) => item.duration === "2 months")
+document.write("<br/>", userResult,"<br/>")
+console.log(userResult)
+userResult = Lang.filter( (item) => item.fees < 10000)
+document.write("<br/>", userResult)
+console.log(userResult)
+    </script>
+</body>
+</html>

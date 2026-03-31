@@ -1,0 +1,23 @@
+<html>
+    <head>
+        <title>example of create method</title>
+    </head>
+    <body>
+        <script type="text/javascript">
+           function name() 
+           {
+            this.myname = "jeetendra" ;
+            this.age= 52;
+            }
+
+            function PrintName ()
+             {
+                name.call(this);
+            }
+        PrintName.prototype = Object.create(name.prototype);
+        const a1 = new PrintName();
+        document.writeln(a1.myname + "<br>");
+        document.writeln(a1.age);
+        </script>
+    </body>
+</html>
